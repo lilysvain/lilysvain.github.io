@@ -1,0 +1,607 @@
+@charset "UTF-8";
+/* line 7, ../sass/reset.scss */
+body, input, label, select, option, textarea, button, fieldset, legend {
+  font: 14px Helvetica, Arial, "Microsoft Yahei", "微软雅黑", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 13, ../sass/reset.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 18, ../sass/reset.scss */
+p, ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 23, ../sass/reset.scss */
+ul, ol {
+  list-style: inside;
+}
+
+/* line 28, ../sass/reset.scss */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* line 34, ../sass/reset.scss */
+ul.line li, ol.line li {
+  list-style: none;
+  display: inline-block;
+}
+
+/* line 40, ../sass/reset.scss */
+.alarm {
+  color: red;
+}
+
+/* line 44, ../sass/reset.scss */
+.hidden {
+  display: none;
+}
+
+/* line 48, ../sass/reset.scss */
+.clearfix {
+  zoom: 1;
+}
+
+/* line 51, ../sass/reset.scss */
+.clearfix:after {
+  content: '.';
+  display: block;
+  clear: both;
+  line-height: 0;
+  visibility: hidden;
+}
+
+/* line 6, ../sass/base.scss */
+fieldset {
+  border: none;
+}
+
+/* line 10, ../sass/base.scss */
+legend {
+  display: none;
+}
+
+/* line 14, ../sass/base.scss */
+.main-container {
+  margin-top: 30px;
+}
+
+/* line 18, ../sass/base.scss */
+.content-wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+
+/* line 23, ../sass/base.scss */
+.top-fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 30px;
+  background-color: #3E3E3E;
+  color: #c9dffb;
+  line-height: 30px;
+  z-index: 99;
+}
+
+/* line 34, ../sass/base.scss */
+.top-content {
+  width: 960px;
+  margin: 0 auto 0;
+}
+
+/* line 39, ../sass/base.scss */
+.top-logo {
+  float: left;
+}
+/* line 41, ../sass/base.scss */
+.top-logo a.logo-pic {
+  text-indent: -99em;
+  width: 92px;
+  height: 30px;
+  display: inline-block;
+  background: url("../images/logo_min-s0dd5e90a6c.png") no-repeat;
+}
+/* line 48, ../sass/base.scss */
+.top-logo a.logo-pic:hover {
+  background-position: 0 -30px;
+}
+/* line 51, ../sass/base.scss */
+.top-logo span {
+  margin-left: 20px;
+}
+
+/* line 56, ../sass/base.scss */
+.top-links {
+  float: right;
+}
+/* line 58, ../sass/base.scss */
+.top-links ul {
+  float: right;
+}
+/* line 61, ../sass/base.scss */
+.top-links li {
+  margin-left: 8px;
+}
+
+/* line 66, ../sass/base.scss */
+.bottom-footer {
+  height: 40px;
+  line-height: 40px;
+  background-color: #499e8d;
+  text-align: center;
+  margin-top: 30px;
+}
+/* line 72, ../sass/base.scss */
+.bottom-footer li {
+  padding: 0 5px;
+  color: #fff;
+}
+
+/* line 78, ../sass/base.scss */
+.pages {
+  font-size: 15px;
+  color: #9da09e;
+  text-align: center;
+}
+/* line 82, ../sass/base.scss */
+.pages a {
+  display: inline-block;
+  padding: 0 5px;
+  margin: 0 3px;
+  line-height: 30px;
+}
+/* line 88, ../sass/base.scss */
+.pages a.able:hover {
+  background-color: #3e3e3e;
+  color: #d6d6d6;
+}
+/* line 92, ../sass/base.scss */
+.pages .cur {
+  color: #5e5e5e;
+  font-size: 18px;
+}
+
+/* line 98, ../sass/base.scss */
+.nav-fix {
+  position: fixed;
+  right: 0;
+  top: 30%;
+  width: 90px;
+  text-align: center;
+}
+/* line 104, ../sass/base.scss */
+.nav-fix ul {
+  list-style: none;
+}
+/* line 107, ../sass/base.scss */
+.nav-fix li {
+  line-height: 30px;
+  background-color: rgba(133, 204, 159, 0.3);
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid rgba(72, 157, 140, 0.3);
+  margin: 5px 0;
+  color: #fff;
+}
+/* line 114, ../sass/base.scss */
+.nav-fix li a {
+  display: inline-block;
+  width: 100%;
+}
+/* line 119, ../sass/base.scss */
+.nav-fix li:hover {
+  background-color: rgba(157, 223, 251, 0.6);
+  border: 1px solid #9ddffb;
+  color: #fff;
+}
+
+/*@import "compass/utilities/sprites";
+@import "../images/mess*/
+                         /*.png";
+@include all-mess-sprites;*/
+/* line 9, ../sass/index.scss */
+#up-area {
+  height: 315px;
+  background-color: #85cc9f;
+  overflow: hidden;
+  border-bottom: 5px dotted #fff;
+}
+
+/* line 16, ../sass/index.scss */
+#upArea-content {
+  width: 960px;
+  margin: 0 auto;
+}
+
+/* line 21, ../sass/index.scss */
+#i-logo {
+  float: right;
+}
+
+/* line 25, ../sass/index.scss */
+#words-wrapper {
+  position: relative;
+  margin-top: 18px;
+  width: 480px;
+  height: 280px;
+  background-color: #fff6c9;
+  border: 1px solid #a9a383;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+}
+
+/* line 35, ../sass/index.scss */
+.arrow-left, .arrow-right {
+  position: absolute;
+  top: 125px;
+  left: -50px;
+  width: 30px;
+  height: 30px;
+  background: transparent url("../images/arrow-scfb096f35d.png") no-repeat;
+}
+
+/* line 43, ../sass/index.scss */
+.arrow-left:hover, .arrow-right:hover {
+  background-position: 0 -31px;
+}
+
+/* line 46, ../sass/index.scss */
+.arrow-right {
+  background-position: 0 -62px;
+  left: auto;
+  right: -50px;
+}
+
+/* line 52, ../sass/index.scss */
+.arrow-right:hover {
+  background-position: 0 -92px;
+}
+
+/* line 56, ../sass/index.scss */
+#words-content {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+/* line 60, ../sass/index.scss */
+#words-content h1 {
+  width: 0;
+  font-size: 0;
+}
+/* line 64, ../sass/index.scss */
+#words-content section {
+  float: left;
+  position: relative;
+  height: 256px;
+  padding: 12px 10px;
+  width: 460px;
+}
+
+/* line 73, ../sass/index.scss */
+#words-list {
+  height: 100%;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.6s;
+  -o-transition-duration: 0.6s;
+  -webkit-transition-duration: 0.6s;
+  transition-duration: 0.6s;
+  visibility: visible;
+}
+
+/* line 80, ../sass/index.scss */
+.word-pic {
+  float: left;
+  max-width: 280px;
+  max-height: 260px;
+  margin-right: 18px;
+}
+
+/* line 87, ../sass/index.scss */
+.word-date {
+  font-family: "Agency FB";
+  font-size: 36px;
+  line-height: 1.5;
+  color: #373636;
+}
+
+/* line 94, ../sass/index.scss */
+.word-text {
+  line-height: 1.8;
+  color: #3E3E3E;
+}
+/* line 97, ../sass/index.scss */
+.word-text p, .word-text ul, .word-text ol {
+  text-indent: 2em;
+}
+/* line 100, ../sass/index.scss */
+.word-text em {
+  font-weight: bold;
+  font-style: normal;
+}
+/* line 104, ../sass/index.scss */
+.word-text a:hover {
+  color: #a0c4f3;
+}
+
+/* line 109, ../sass/index.scss */
+.word-manage, #word-pub {
+  position: absolute;
+  right: 15px;
+  color: #ab5937;
+}
+
+/* line 115, ../sass/index.scss */
+#word-pub {
+  bottom: 10px;
+  z-index: 1;
+}
+
+/* line 122, ../sass/index.scss */
+#i-logo hgroup {
+  width: 327px;
+  height: 86px;
+  background: transparent url(../images/index-logo.png) no-repeat;
+  text-indent: -99em;
+  font-size: 0;
+  margin: 40px 0px 20px 0;
+}
+
+/* line 132, ../sass/index.scss */
+#person_info {
+  text-align: right;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #3e3e3e;
+}
+
+/* line 139, ../sass/index.scss */
+#wb-button, #weixin-button {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 144, ../sass/index.scss */
+#weixin-button {
+  width: 22px;
+  height: 22px;
+  background: transparent url(../images/weixin-button.png) no-repeat;
+  position: relative;
+  bottom: 1px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+/* line 153, ../sass/index.scss */
+#weixin-button img {
+  position: absolute;
+  right: 28px;
+  bottom: -14px;
+}
+
+/* line 160, ../sass/index.scss */
+#weixin-button:hover img {
+  display: block;
+}
+
+/* line 164, ../sass/index.scss */
+#article-list {
+  margin-top: 53px;
+  width: 480px;
+  float: left;
+  border-top: 1px #c8e8c7 solid;
+  position: relative;
+  padding-top: 36px;
+}
+
+/* line 173, ../sass/index.scss */
+#alist-title, #mess-title {
+  position: absolute;
+  border: 30px solid #c8e8c7;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+  width: 0;
+  height: 0;
+  top: -30px;
+  left: -30px;
+}
+/* line 181, ../sass/index.scss */
+#alist-title h1, #mess-title h1 {
+  font-family: SimSun, "瀹嬩綋";
+  font-size: 35px;
+  color: #fff;
+  line-height: 60px;
+  text-align: center;
+  position: absolute;
+  width: 60px;
+  top: -30px;
+  left: -30px;
+}
+
+/* line 193, ../sass/index.scss */
+#alist-title:hover, #mess-title:hover {
+  border-color: #499E8D;
+}
+
+/* line 197, ../sass/index.scss */
+.alist-more {
+  position: absolute;
+  right: 0;
+  color: #a9a383;
+  font-size: 18px;
+  top: -24px;
+}
+
+/* line 205, ../sass/index.scss */
+.a-title {
+  position: relative;
+  margin-bottom: 18px;
+  line-height: 24px;
+}
+/* line 209, ../sass/index.scss */
+.a-title h1 {
+  display: inline-block;
+  font-size: 16px;
+  color: #3e3e3e;
+  font-weight: normal;
+}
+/* line 215, ../sass/index.scss */
+.a-title h1:hover {
+  color: #499E8D;
+}
+/* line 218, ../sass/index.scss */
+.a-title time {
+  position: absolute;
+  right: 0;
+  font-size: 14px;
+  color: #9da09e;
+}
+
+/* line 226, ../sass/index.scss */
+#work-list {
+  width: 420px;
+  height: 420px;
+  float: right;
+  margin: 53px 0 30px 0;
+  position: relative;
+}
+
+/* line 234, ../sass/index.scss */
+.w-single {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  float: left;
+  margin: 0 0 10px 10px;
+}
+/* line 242, ../sass/index.scss */
+.w-single img {
+  position: absolute;
+  clip: rect(0, 200px, 200px, 0);
+}
+/* line 246, ../sass/index.scss */
+.w-single h1 {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  text-align: center;
+  line-height: 200px;
+}
+/* line 256, ../sass/index.scss */
+.w-single h1 a {
+  display: inline-block;
+  color: #fff;
+  font-size: 16px;
+  width: 100%;
+}
+
+/* line 264, ../sass/index.scss */
+.w-single:hover h1 {
+  visibility: visible;
+}
+
+/* line 268, ../sass/index.scss */
+#work-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -35px 0px 0px -25px;
+  width: 0px;
+  height: 0px;
+  z-index: 1;
+  border: 30px solid rgba(73, 158, 141, 0.6);
+  text-align: center;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+}
+/* line 279, ../sass/index.scss */
+#work-title a {
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  color: #fff;
+  font-size: 30px;
+  font-family: SimSun, "瀹嬩綋";
+  line-height: 60px;
+  width: 60px;
+}
+
+/* line 290, ../sass/index.scss */
+#work-title:hover {
+  border-color: #499e8d;
+}
+
+/* line 294, ../sass/index.scss */
+#mess-list {
+  clear: both;
+  border-top: 1px dashed #499e8d;
+  position: relative;
+  padding-top: 20px;
+}
+
+/* line 305, ../sass/index.scss */
+#go-mess {
+  position: absolute;
+  top: -25px;
+  right: 0;
+  padding: 0 0 0 20px;
+  background: transparent url("../images/mess-s409f9716e5.png") no-repeat;
+  color: #499e8d;
+}
+
+/* line 314, ../sass/index.scss */
+.mess-single {
+  clear: both;
+  height: 40px;
+}
+/* line 317, ../sass/index.scss */
+.mess-single .floor {
+  width: 100px;
+  text-align: center;
+  float: left;
+  color: #9da09e;
+  font-size: 14px;
+  line-height: 40px;
+}
+/* line 325, ../sass/index.scss */
+.mess-single p, .mess-single ul, .mess-single ol {
+  display: inline-block;
+  line-height: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  max-width: 600px;
+  color: #3e3e3e;
+}
+/* line 335, ../sass/index.scss */
+.mess-single .mess-name {
+  color: #ffb200;
+  font-size: 16px;
+}
+/* line 339, ../sass/index.scss */
+.mess-single time {
+  float: right;
+  line-height: 40px;
+  color: #9da09e;
+}
