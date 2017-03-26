@@ -1,0 +1,218 @@
+#container{
+	background: url("../image/scene3.png") no-repeat;
+	background-size: 100%;
+}
+
+#bubble{
+	background-color: rgba(27,106,74,0.9);
+}#people{
+	background: url(../image/people2.png) no-repeat;
+	width: 275px;
+	height: 352px;
+}
+#people{
+	background: url(../image/people3.png) no-repeat;
+	width: 191px;
+	height: 473px;
+}
+
+#use_container{
+	background-color: rgba(27,106,74,0.8);
+}
+#use_content{
+	background-color: rgba(27,106,74,0.7);
+}
+
+#key{
+	width: 89px;
+	height: 50px;
+	position: absolute;
+	background: url(../image/key.png) no-repeat;
+	background-position: center;
+	background-size: 60%;
+	top: 515px;
+	left: 1032px;
+	cursor: pointer;
+}
+
+#drawer{
+	width: 139px;
+	height: 69px;
+	position: absolute;
+	background: url(../image/drawer.png) no-repeat;
+	top: 326px;
+	left: 901px;
+}
+#envelope{
+	width: 72px;
+	height: 26px;
+	position: absolute;
+	background: url(../image/enve_half.png) no-repeat;
+	top: 3px;
+	left: 25px;
+	cursor: pointer;
+}
+
+#key_item{
+	background-image: url(../image/key.png);
+}
+#enve_item{
+	background-image: url(../image/envelope.png);
+}
+
+#case_open{
+	width: 466px;
+	height: 356px;
+	position: absolute;
+	background: url(../image/case.png) no-repeat;
+	bottom: 0px;
+	left: 0px;
+	cursor: pointer;
+}
+#tip{
+	width: 340px;
+	height: 244px;
+	position: absolute;
+	background: url(../image/tip.png) no-repeat;
+	bottom: -2px;
+	left: 0px;
+	cursor: pointer;
+}
+
+#password1{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.7);
+	z-index: 999;
+	position: absolute;
+}
+#pass_wrap{
+	width: 752px;
+	height: 186px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -376px;
+	margin-top: -93px;
+	text-align: center;
+	background: url(../image/pass1.png) no-repeat;
+}
+#pass_wrap input{
+	height: 186px;
+	width: 752px;
+	line-height: 186px;
+	background-color: transparent;
+	border: none;
+	font-size: 60px;
+	color: #1e3349;
+}
+
+#door{
+	width: 176px;
+	height: 314px;
+	position: absolute;
+	background: url(../image/open_door2.png) no-repeat;
+	right: 0;
+	top: 248px;
+}
+
+#card_black{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.7);
+    z-index: 999;
+    position: absolute;
+}
+#code_black,#tip_black{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.7);
+    z-index: 999;
+    position: absolute;
+}
+
+#tip_black div{
+    width: 290px;
+    height: 190px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -150px;
+    margin-top: -100px;
+    background-color: #f1dc72;
+    border-radius: 10px;
+    border: 5px solid #000000;
+    font-size: 45px;
+    line-height: 95px;
+    text-align: center;
+    font-family: "微软雅黑";
+}
+
+#card_black img{
+    width: 400px;
+    height: 334px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -167px;
+}
+
+#case_close{
+    width: 424px;
+    height: 147px;
+    position: absolute;
+    bottom:0;
+    left:0;
+    cursor:pointer;
+}
+
+#password{
+    width:560px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -280px;
+    margin-top: -150px;
+}
+
+.code{
+    background-color:#839c95;
+    width: 130px;
+    height: 290px;
+    float:left;
+    overflow: hidden;
+    border: 5px solid black;
+    position: relative;
+}
+
+.code ul{
+    margin: 0;
+    padding:0;
+    width: 100%;
+    height: 2900px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+}
+
+.code li{
+    width: 100%;
+    height: 290px;
+    list-style: none;
+    font-size: 200px;
+    line-height: 290px;
+    text-align: center;
+    color: #1e3349;
+}
+
+#door_code{
+    width: 68px;
+    height: 30px;
+    position: absolute;
+    right: 7px;
+    top: 383px;
+    cursor: pointer;
+}

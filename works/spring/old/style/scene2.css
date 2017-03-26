@@ -1,0 +1,148 @@
+#container{
+	background: url("../image/scene2.png") no-repeat;
+	background-size: 100%;
+}
+
+#pear{
+	position: absolute;
+	background: url("../image/pear.png") no-repeat;
+	background-position: -63px 0px;
+	width: 62px;
+	height: 62px;
+	top: 286px;
+	right: 3px;
+	cursor: pointer;
+}
+
+#apple{
+	position: absolute;
+	background: url("../image/apple.png") no-repeat;
+	background-position: right;
+	width: 72px;
+	height: 75px;
+	top: 426px;
+	right: 0px;
+	cursor: pointer;
+}
+
+#blueberry{
+	position: absolute;
+	background: url("../image/blueberry.png") no-repeat;
+	background-position: right;
+	width: 107px;
+	height: 126px;
+	bottom: 97px;
+	right: 312px;
+	cursor: pointer;
+}
+#squeezer{
+	position: absolute;
+	background: url("../image/squeezer.png") no-repeat;
+	background-position: right;
+	width: 246px;
+	height: 317px;
+	bottom: 191px;
+	right: 127px;
+}
+#rock{
+	position: absolute;
+	background: url("../image/rock.png") no-repeat;
+	width: 40px;
+	height: 69px;
+	top: 42px;
+	left: 0;
+	cursor: pointer;
+}
+
+#clown{
+	position: absolute;
+	width: 420px;
+	height: 500px;
+	left: 72px;
+	top: 190px;
+}
+#eye{
+	position: absolute;
+	background: url("../image/eye.png") no-repeat;
+	width: 80px;
+	height: 77px;
+	top: 207px;
+	left: 121px;
+}
+
+#liquid{
+	position: absolute;
+	z-index: 2;
+	width: 204px;
+	height: 161px;
+	background: url("../image/bottle.png") no-repeat;
+	cursor: pointer;
+}
+
+.fruit{
+	z-index:2;
+}
+.fruit p{
+	background-color: rgba(255,255,255,0.6);
+	position: relative;
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	top: -40px;
+	font-weight: bold;
+	border: 1px dashed #fff;
+}
+
+.item{
+  width: 106px;
+  height: 84px;
+  margin: 28px 10px;
+}
+
+#red_item{
+	background: url("../image/bottle.png") no-repeat;
+	background-size: 100%;
+	background-position: center;
+}
+#purple_item{
+	background: url("../image/bottle.png") no-repeat;
+	background-size: 100%;
+	background-position: top;
+}
+#orange_item{
+	background: url("../image/bottle.png") no-repeat;
+	background-size: 100%;
+	background-position: bottom;
+}
+
+#squeezer .pull_down{
+	left: 42px;
+	top: 48px;
+	-webkit-transform: scaleX(-1) rotate(-10deg);
+	transform: scaleX(-1) rotate(-10deg);
+}
+
+#bottle{
+	width: 204px;
+	height: 161px;
+	margin: 0 auto;
+	background: url("../image/bottle.png") no-repeat;
+}
+
+#bubble{
+	background-color: rgba(125,94,142,.9);
+}
+
+#people{
+	background: url(../image/people2.png) no-repeat;
+	width: 275px;
+	height: 352px;
+}
+
+#use_container{
+	background-color: rgba(138,117,150,0.8)
+}
+
+#use_content{
+	background-color: rgba(138,117,150,0.7);
+}

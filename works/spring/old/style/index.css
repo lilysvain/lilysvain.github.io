@@ -1,0 +1,199 @@
+@-webkit-keyframes bounceIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(.3);
+    transform: scale(.3);
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
+  70% {
+    -webkit-transform: scale(.9);
+    transform: scale(.9);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(.3);
+    -ms-transform: scale(.3);
+    transform: scale(.3);
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
+  70% {
+    -webkit-transform: scale(.9);
+    -ms-transform: scale(.9);
+    transform: scale(.9);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.bounceIn {
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
+  -webkit-animation-duration: 1.2s;
+  animation-duration: 1.2s;
+}
+
+.shake {
+  -webkit-animation-name: shake;
+  animation-name: shake;
+}
+
+body{
+	padding: 0;
+	margin: 0;
+	background-color: #000;
+	font-family: "Microsoft yahei";
+}
+p,h1{
+	margin: 0;
+	padding: 0;
+}
+
+#container{
+	position: relative;
+	width: 1280px;
+	height: 717px;
+	margin: 0 auto;
+	background: url(../image/index.png) no-repeat;
+}
+
+#select #container{
+	background: url(../image/select.png) no-repeat;
+}
+
+#header{
+	width: 900px;
+	height: 183px;
+	background: url(../image/header.png) no-repeat;
+	margin: 0 auto;
+	position: relative;
+	top: 300px;
+}
+
+#header h1{
+	text-indent: -99em;
+	background: url(../image/spring.png) no-repeat;
+	width: 353px;
+	height: 183px;
+	position: absolute;
+	left: 393px;
+}
+
+#start{
+	display: block;
+	width: 211px;
+	height: 63px;
+	background: url(../image/start.png) no-repeat;
+	background-position: bottom;
+	cursor: pointer;
+	position: absolute;
+	left: 50%;
+	margin-left: -105px;
+	top: 490px;
+}
+#start:hover{
+	background-position: top;
+}
+
+#one{
+	background: url(../image/level1.png) no-repeat;
+	width: 692px;
+	height: 561px;
+	position: absolute;
+	left: 586px;
+	top: 110px;
+	cursor: pointer;
+	z-index: 3;
+}
+
+#one .snow{
+	background: url(../image/snow1.png) no-repeat;
+	width: 100%;
+	height: 100%;
+}
+#two{
+	background: url(../image/level2.png) no-repeat;
+	width: 411px;
+	height: 531px;
+	position: absolute;
+	left: 70px;
+	top: 80px;
+	cursor: pointer;
+	z-index: 2;
+}
+
+#two .snow{
+	background: url(../image/snow2.png) no-repeat;
+	width: 100%;
+	height: 100%;
+}
+
+#three{
+	background: url(../image/level3.png) no-repeat;
+	width: 305px;
+	height: 327px;
+	position: absolute;
+	left: 476px;
+	top: 0px;
+	cursor: pointer;
+	z-index: 4;
+}
+
+#three .snow{
+	background: url(../image/snow3.png) no-repeat;
+	width: 100%;
+	height: 100%;
+}
+
+#white{
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	z-index: -1;
+	position: absolute;
+  opacity: 0;
+}
+#container .show{
+  opacity: 1;
+  transition: opacity 0.6s linear;
+}
+
+.snow{
+	opacity: 1;
+	transition: opacity 1s linear;
+	transition-delay: .5s;
+}
+
+.opacity{
+	opacity: 0;
+}
+
+.hide{
+	display: none;
+}

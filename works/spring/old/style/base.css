@@ -1,0 +1,330 @@
+body{
+	padding: 0;
+	margin: 0;
+	background-color: #000;
+	font-family: "宋体";
+}
+p,h1{
+	margin: 0;
+	padding: 0;
+}
+
+#container{
+	position: relative;
+	width: 1280px;
+	height: 717px;
+	margin: 0 auto;
+}
+
+#helper{
+	position: absolute;
+	width: 91px;
+	height: 85px;
+	background: url("../image/hand.png") no-repeat;
+	right: 0;
+	bottom: 140px;
+	cursor: pointer;
+	z-index: 10;
+}
+#helper:hover{
+	background-position: bottom;
+}
+
+#bag{
+	width: 100%;
+	height: 100%;
+}
+
+.hide{
+	display: none;
+}
+
+#white{
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	z-index: -1;
+	position: absolute;
+  opacity: 0;
+}
+
+#remind{
+	width: 400px;
+	height: 400px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -200px;
+	margin-top: -200px;
+	text-align: center;
+}
+#remind p{
+	font-size: 26px;
+	color: #fff;
+	margin: 60px auto;
+}
+#remind img{
+	display: block;
+	margin: 0 auto;
+}
+
+#start{
+	z-index: 99;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.8);
+	transition: opacity 0.5s linear;
+}
+
+#black{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.7);
+	z-index: 999;
+	position: absolute;
+}
+
+.opacity{
+	opacity: 0;
+}
+#container .show{
+  opacity: 1;
+  transition: opacity 0.6s linear;
+}
+
+@-webkit-keyframes tada {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  10%, 20% {
+    -webkit-transform: scale(0.8) rotate(-3deg);
+    transform: scale(0.8) rotate(-3deg);
+  }
+
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale(1.2) rotate(3deg);
+    transform: scale(1.2) rotate(3deg);
+  }
+
+  40%, 60%, 80% {
+    -webkit-transform: scale(1.2) rotate(-3deg);
+    transform: scale(1.2) rotate(-3deg);
+  }
+
+  100% {
+    -webkit-transform: scale(1) rotate(0);
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes tada {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  10%, 20% {
+    -webkit-transform: scale(0.8) rotate(-3deg);
+    -ms-transform: scale(0.8) rotate(-3deg);
+    transform: scale(0.8) rotate(-3deg);
+  }
+
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale(1.2) rotate(3deg);
+    -ms-transform: scale(1.2) rotate(3deg);
+    transform: scale(1.2) rotate(3deg);
+  }
+
+  40%, 60%, 80% {
+    -webkit-transform: scale(1.2) rotate(-3deg);
+    -ms-transform: scale(1.2) rotate(-3deg);
+    transform: scale(1.2) rotate(-3deg);
+  }
+
+  100% {
+    -webkit-transform: scale(1) rotate(0);
+    -ms-transform: scale(1) rotate(0);
+    transform: scale(1) rotate(0);
+  }
+}
+
+.tada {
+  -webkit-animation-name: tada;
+  animation-name: tada;
+  animation-iteration-count:infinite;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s;
+}
+
+@-webkit-keyframes flipInY {
+  0% {
+    -webkit-transform: perspective(400px) rotateY(0deg);
+    transform: perspective(400px) rotateY(0deg);
+  }
+
+  100% {
+    -webkit-transform: perspective(400px) rotateY(60deg);
+    transform: perspective(400px) rotateY(60deg);
+  }
+}
+
+@keyframes flipInY {
+  0% {
+    -webkit-transform: perspective(400px) rotateY(0deg);
+    transform: perspective(400px) rotateY(0deg);
+  }
+
+  100% {
+    -webkit-transform: perspective(400px) rotateY(60deg);
+    transform: perspective(400px) rotateY(60deg);
+  }
+}
+@-webkit-keyframes flipOutY {
+  0% {
+    -webkit-transform: perspective(400px) rotateY(60deg);
+    transform: perspective(400px) rotateY(60deg);
+  }
+
+  100% {
+    -webkit-transform: perspective(400px) rotateY(0deg);
+    transform: perspective(400px) rotateY(0deg);
+  }
+}
+
+@keyframes flipOutY {
+  0% {
+    -webkit-transform: perspective(400px) rotateY(60deg);
+    transform: perspective(400px) rotateY(60deg);
+  }
+
+  100% {
+    -webkit-transform: perspective(400px) rotateY(0deg);
+    transform: perspective(400px) rotateY(0deg);
+  }
+}
+
+.flipInY {
+	-webkit-animation-name: flipInY;
+	animation-name: flipInY;
+	-webkit-animation-duration: .7s;
+	animation-duration: .7s;
+	-webkit-transform: perspective(400px) rotateY(60deg);
+    transform: perspective(400px) rotateY(60deg);
+}
+.flipOutY {
+	-webkit-animation-name: flipOutY;
+	animation-name: flipOutY;
+	-webkit-animation-duration: .7s;
+	animation-duration: .7s;
+	-webkit-transform: perspective(400px) rotateY(0deg);
+    transform: perspective(400px) rotateY(0deg);
+}
+
+.select{
+  background-color: rgba(255,255,255,0.2);
+}
+
+#bubble{
+  z-index: 1;
+  position: fixed;
+  bottom: 5px;
+  right: 50px;
+  width: 640px;
+  height: 163px;
+  background-color: rgba(34,124,134,.9);
+  border: 5px solid rgba(0,0,0,0.7);
+  border-radius: 10px;
+  padding: 10px 216px 10px 10px;
+  cursor: pointer;
+}
+
+#bubble p{
+  color: #070A10;
+  padding: 10px 10px;
+  font-size: 24px;
+  line-height: 2;
+  text-indent: 2em;
+  font-weight: bold;
+}
+
+#use_container{
+  position: absolute;
+  background-color: rgba(34,124,134,.80);
+  width: 769px;
+  height: 430px;
+  margin-top: 90px;
+  border: 8px solid rgba(0,0,0,.80);
+  border-radius: 30px;
+  z-index: 3;
+}
+
+#use_button{
+  background:url("../image/use_icon.png") no-repeat;
+  background-size: 100%;
+  margin: 15px auto;
+  width: 385px;
+  height: 83px;
+  text-align: justify;
+  overflow: hidden;
+}
+
+#use_button div{
+  display: inline-block;
+  height: 100%;
+  width: 25%;
+  cursor: pointer;
+}
+#use_content{
+  position: relative;
+  width: 630px;
+  margin: 0 auto;
+  background-color: rgba(6,105,106,.7);
+  height: 280px;
+  border: 2px solid rgba(0,0,0,.7);
+  border-radius: 10px;
+}
+
+#use_content>div{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.item{
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 106px;
+  height: 120px;
+  cursor: pointer;
+  float: left;
+  margin: 10px;
+  transition: background-color .5s linear;
+}
+
+#close{
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 2.4em;
+  font-weight: bold;
+  cursor: pointer;
+  width: 5%;
+  text-align: center;
+  font-family: 黑体;
+}
+
+#people{
+  z-index: 2;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 342px;
+  width: 246px;
+  background: transparent url(../image/people.png);
+}

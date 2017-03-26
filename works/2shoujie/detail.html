@@ -1,0 +1,431 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>校园二手街</title>
+    <link rel="stylesheet" href="static/css/init.css"/>
+    <link rel="stylesheet" href="static/css/main.css"/>
+    <link rel="stylesheet" href="static/css/index.css"/>
+    <link rel="stylesheet" href="static/css/detail.css"/>
+    <script type="text/javascript" src="static/js/html5.js"></script>
+</head>
+<body>
+<header class="ease2">
+    <a href="#"><img class="logo ease2" src="static/image/logo.png" alt="校园二手街"/></a>
+    <div class="header-main center ease2">
+        <a href="" class="slogan">
+            <h1 class="s-main">华中科技大学校园二手街</h1>
+            <div class="s-submain">最安全方便的二手市场</div>
+            <img src="static/image/slogan.png" alt="slogan"/>
+        </a>
+        <div class="search-box-wr ease2">
+            <form class="search-box center" action="/search" method="get">
+                <button type="submit" class="search-submit">搜索</button>
+                <div class="input-wr">
+                    <img class="search-icon" src="static/image/search-icon.png" alt=""/>
+                    <div class="search-input">
+                        <input name="keyword" id="keyword" x-webkit-speech type="text" placeholder="搜索你想要的二货"/>
+                    </div>
+                </div>
+            </form>
+            <div class="search-hots center ease2">
+                <span>热门：</span>
+                <a class="hots very" href="">自行车</a>
+                <a class="hots" href="">电动车</a>
+                <a class="hots" href="">笔记本</a>
+                <a class="hots" href="">教材</a>
+            </div>
+        </div>
+        <div class="log-reg ease2">
+
+            <!--<div class="button" data-type="l">登录</div>
+            <div class="button" data-type="r">注册</div>-->
+            <div id="have_login" class="clearfix">
+                <div id="person_info" class="clearfix">
+                    <img class="avatar" src="static/image/avatar2.png" alt="头像" />
+                    <div class="person_name">马可长不大的二货</div>
+                    <a href="" target="_blank" class="grade"><img src="static/image/ico_lv.png" alt="等级显示" /></a>
+                    <a class="person_message on" href="javascript:void(0);">0</a>
+                </div>
+                <img class="login_border" src="static/image/login_border.png" alt="下划线" />
+                <div class="login_slider">
+                    <h3>嗨，<span>马可长不大的二货</span></h3>
+                    <ul >
+                        <li><a  href="javascript:void(0);">个人中心</a></li>
+                        <li><a  href="javascript:void(0);">我的收藏</a></li>
+                        <li><a  href="javascript:void(0);">退出登录</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<nav class="ease2">
+    <ul>
+        <li class="blank-head"><a href="javascript:void(0);"></a></li>
+        <li class="area">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"></i>
+                <div id="college"><span>华中科技大学</span></div>
+                <span class="switch">切换</span>
+            </a>
+        </li>
+        <!--<li id="schools">
+            <ul >
+                <li id="hust" class="now_sch"><a href="javascript:void(0);">华中科大</a></li>
+                <li id="znufe" ><a href="javascript:void(0);">中南财大</a></li>
+            </ul>
+        </li>-->
+        <li class="category-1 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/1.png" /></i>
+                <h3>校园代步</h3>
+                <!-- <span>校园代步</span> -->
+            </a>
+            <div class="sub-nav">
+                <span><a href="">自行车</a><a href="">电动车</a></span>
+            </div>
+        </li>
+        <li class="category-2 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/2.png" /></i>
+                <h3>手机</h3>
+                <!-- <span>手机</span> -->
+            </a>
+        </li>
+        <li class="category-3 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/3.png" /></i>
+                <h3>电脑</h3>
+                <!-- <span>电脑</span> -->
+            </a>
+            <div class="sub-nav">
+                <span><a href="">iphone</a><a href="">小米</a><a href="">三星</a><a href="">魅族</a><a href="">联想</a>
+                    <a href="">自行车</a><a href="">电动车</a><a href="">网球拍</a></span>
+            </div>
+        </li>
+        <li class="category-4 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/4.png" /></i>
+                <h3>数码配件</h3>
+                <!-- <span>数码</span> -->
+            </a>
+        </li>
+        <li class="category-5 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/5.png" /></i>
+                <h3>数码</h3>
+                <!-- <span>数码配件</span> -->
+            </a>
+        </li>
+        <li class="category-6 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/6.png" /></i>
+                <h3>电器</h3>
+                <!-- <span>电器</span> -->
+            </a>
+        </li>
+        <li class="category-7 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/7.png" /></i>
+                <h3>运动健身</h3>
+                <!-- <span>图书教材</span> -->
+            </a>
+        </li>
+        <li class="category-8 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/8.png" /></i>
+                <h3>衣物伞帽</h3>
+                <!-- <span>运动健身</span> -->
+            </a>
+        </li>
+        <li class="category-9 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/9.png" /></i>
+                <h3>图书教材</h3>
+                <!-- <span>衣物伞帽</span> -->
+            </a>
+        </li>
+        <li class="category-10 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/10.png" /></i>
+                <h3>租赁</h3>
+                <!-- <span>租赁</span> -->
+            </a>
+        </li>
+        <li class="category-11 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/11.png" /></i>
+                <h3>生活娱乐</h3>
+                <!-- <span>生活娱乐</span> -->
+            </a>
+        </li>
+        <li class="category-12 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/12.png" /></i>
+                <h3>其他</h3>
+                <!-- <span>其他</span> -->
+            </a>
+        </li>
+    </ul>
+</nav>
+<div class="container">
+<div class="main center clearfix">
+    <div class="ershou-details">
+        <div class="ershou-photos-wr">
+            <a class="ershou-favorite" href="javascript:void(0);">123</a>
+            <a class="bigger-photo" title="点开看大图" href="static/image/test1.jpg" target="_blank">
+                <img class="bigger" src="static/image/test1.jpg" alt=""/>
+            </a>
+            <div class="ershou-photo-slide">   
+                <div class="ershou-small-photos">
+                    <img class="small" src="static/image/test1.jpg" alt=""/>
+                </div> 
+                <div class="ershou-small-photos">
+                    <img class="small cur" src="static/image/test2.jpg" alt=""/>
+                </div> 
+                <div class="ershou-small-photos">
+                    <img class="small" src="static/image/test3.jpg" alt=""/>
+                </div>
+                <div class="ershou-small-photos">
+                    <img class="small" src="static/image/test2.png" alt=""/>
+                </div>
+            </div>
+            <div class="ershou-photo-slide-layer">   
+            </div>
+        </div>
+        <div class="ershou-info">
+            <div class="ershou-edit-bt">
+                <div class="edit-border"></div>
+                <a href="">edit</a>
+            </div>
+            <div class="ershou-hd">
+                <h2 class="ershou-title">范德萨发撒旦</h2>
+                <div class="ershou-price discount">
+					<span>234</span>
+					<span class="is-discount">可小刀</span>
+				</div>
+            </div>
+            <ul class="ershou-detail">
+                <li class="ershou-place">
+                    <div class="name"><span>交易地点</span></div>
+                    <div class="value"><span>主校区</span></div>
+                </li>
+                <li class="ershou-seller">
+                    <div class="name"><span>卖家</span></div>
+                    <div class="value">
+                        <span>huhuss</span>
+                        <img class="detail-grade" src="http://ershou.u.qiniudn.com/ico_lv10.png" alt="等级显示"/>
+                    </div>
+                </li>
+                <li class="ershou-cert">
+                    <div class="name"><span>认证状态</span></div>
+                    <div class="value"><span>未认证状态</span></div>
+                </li>
+                <li class="ershou-tel">
+                    <div class="name"><span>手机</span></div>
+                    <div class="value"><span>13878789898</span></div>
+                </li>
+                <li class="ershou-phone">
+                    <div class="name"><span>QQ</span></div>
+                    <div class="value"><span>347823748</span></div>
+                </li>
+                <li class="ershou-time">
+                    <div class="name"><span>发布时间</span></div>
+                    <div class="value">
+                        <span class="real-time hidden">2014-08-05</span>
+                        <span class="not-available hidden">&bull; 已下架 &bull;</span>
+                        <span class="sold-out">&bull; 已出售 &bull;</span>
+                    </div>
+                </li>
+            </ul>
+            <a name="xn_share" class="hidden" onclick="shareClick()" href="javascript:void(0);"></a>
+            <a class="xn_share" onclick="shareClick()" href="javascript:void(0);">
+                <img src="static/image/renrenshare.png" alt="人人分享"/>
+            </a>
+            <script type="text/javascript">
+                function shareClick() {
+                    var rrShareParam = {
+                        resourceUrl : '',	//分享的资源Url
+                        srcUrl : '',	//分享的资源来源Url,默认为header中的Referer,如果分享失败可以调整此值为resourceUrl试试
+                        pic : '',		//分享的主题图片Url
+                        title : '',		//分享的标题
+                        description : ''	//分享的详细描述
+                    };
+                    rrShareOnclick(rrShareParam);
+                }
+            </script>
+            <div class="complain"><a href="javascript:void(0);">&bull; 举报 &bull;</a></div>
+        </div>
+    </div>
+    <div class="ershou-desc">
+         <div class="desc clearfix">
+            <img id="user_ph"  src="static/image/test.png" alt="头像"/>
+            <span id="user_cmt">就发空间的萨克解放后十大科技士大夫开机速度恢复快就是大恢复健康四空间的萨克解放后十大科技士大夫开机速度恢复快就是大恢复健康四空间的萨克解放后十大科技士大夫开机速度恢复快就是大恢复健康四空间的萨克解放后十大科技士大夫开机速度恢复快就是大恢复健康四空间的萨克解放后十大科技士大夫开机速度恢复快就是大恢复健康四空间的萨克解放后十大科技士大夫开机速度恢复快就是大恢复健康四</span>
+        </div>
+    </div>
+    <div class="comments">
+        <div class="comments-title">评论</div>
+        <div class="comments-wr">
+            <div class="comment-wr">
+                <div class="comment">
+                    <img class="avatar" src="static/image/test.png" alt="头像"/>
+                    <div class="commentator">飞洒地方<span class="rpy-to">发生大幅</span></div>
+                    <p class="comment">阿斯顿播放空间的萨克解放后十大科技士大夫开机速度恢复快就是大恢复健康四大的撒加咖啡哈萨克几点回福建凯撒</p>
+                    <div class="man">
+                        <a class="rpl" href="javascript:void(0);">回复</a>
+                        <a class="del" href="javascript:void(0);">删除</a>
+                    </div>
+                </div>
+                
+                <div class="comment">
+                    <img class="avatar" src="static/image/test.png" alt="头像"/>
+                    <div class="commentator">撒的部分进口<span class="rpy-to">发生大幅</span></div>
+                    <p class="comment">撒地方你就快点撒恢复开机速度哈佛</p>
+                    <div class="man">
+                        <a class="rpl" href="javascript:void(0);">回复</a>
+                        <a class="del" href="javascript:void(0);">删除</a>
+                    </div>
+                </div>
+                <div class="post-comment clearfix">
+<!--
+                    <img class="avatar" src="static/image/test.png" alt="头像"/>
+                    <div class="commenting clearfix">
+                        <div class="comment-input-wr-wr">
+                            <div class="comment-input-wr">
+                                <textarea class="comment-input" name="comment-input" id=""></textarea>
+                            </div>
+                        </div>
+                        <button class="sub-comment" type="button">评论</button>
+                    </div>
+-->
+                    <img class="avatar" src="static/image/avatar-unlogin.png" alt="头像"/>
+                    <div class="commenting-unlogin clearfix">
+                        <div class="comment-input-wr-wr">
+                            <div class="comment-input-wr">
+                                <span class="tips">评论总要登录留个名吧</span>
+                            </div>
+                        </div>
+                        <button class="comment-login" data-type="l">登录</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="more-goods">
+        <div class="more-title">该用户还在卖</div>
+        <div class="goods-list">
+            <ul class="clearfix">
+                <li><img src="static/image/test.png" alt="例子"/></li>
+                <li><img src="static/image/test.png" alt="例子"/></li>
+                <li><img src="static/image/test.png" alt="例子"/></li>
+                <li><img src="static/image/test.png" alt="例子"/></li>
+            </ul>
+        </div>
+    </div>
+    <div class="concerned-goods">
+        <div class="concerned-title">相关商品</div>
+        <div class="goods-list">
+            <ul class="clearfix">
+                <li><img src="static/image/test.png" alt="例子"/></li>
+                <li><img src="static/image/test.png" alt="例子"/></li>
+                <li><img src="static/image/test.png" alt="例子"/></li>
+                <li><img src="static/image/test.png" alt="例子"/></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+<aside>
+    <a class="release-button" href="##">我要发布</a>
+    <div class="helped">
+        <span class="helpers">99999</span>
+    </div>
+    <div class="qrcode-wr">
+        <img src="static/image/new_web_qrcode.png" alt="下载APP二维码">
+    </div>
+    <h2 class="qqgroup">用户交流群: 178906768</h2>
+    <div class="fl-wrapper clearfix">
+        <div class="wx-follow">
+            <a href="" class="fl-icon"><img src="static/image/weixin-fl.png" /></a>
+            <div class="wx-fl-qrcode">
+                <p>关注我</p><img src="static/image/wx-fl-qrcode.png" /><p>校园二手街</p>
+                <div class="dc-dot"></div>
+            </div>
+        </div>
+        <div class="sina-follow">
+            <a href="" class="fl-icon"><img src="static/image/sina-fl.png" /></a>
+        </div>
+    </div>
+</aside>
+    <footer>
+        <img class="footer-tri" src="static/image/footer-tri.png" alt=""/>
+        <div class="friend-links">
+            <div class="links-title center">友情链接</div>
+            <ul class="links-wr center">
+                <li class="first"><a href="http://www.hust.edu.cn/" target="_blank" class="links">华中科技大学</a></li>
+                <li><a href="http://www.hustonline.net" target="_blank" class="links">华中大在线</a></li>
+                <li><a href="http://ik.hustonline.net/" target="_blank" class="links">iKnow问答</a></li>
+                <li><a href="http://www.weapp.me" target="_blank" class="links">桌游助手</a></li>
+                <li><a href="http://app.hustonline.net/" target="_blank" class="links">大软坊</a></li>
+                <li><a href="http://suta.im/" target="_blank" class="links">苏塔</a></li>
+            </ul>
+        </div>
+        <div class="site-msg line1"><span class="report">鄂ICP备12345667号</span><span class="power">&nbsp;Powered by <a
+                href="www.bingyan.net">冰岩作坊</a></span></div>
+        <div class="site-msg line2"><span class="copy">&copy;2014易橙网络&nbsp;</span><a class="about" href="/about">关于我们</a><a
+                class="contact"
+                href="/contact">联系我们</a></div>
+    </footer>
+    <div class="login-cover">
+        <div class="login-wr">
+            <div class="login-header">
+                <img class="login-logo" src="static/image/logo.png" alt="logo"/>
+                <p class="site-name">校园二手街</p>
+                <div id="renren-button">人人网登陆</div>
+            </div>
+            <div class="login-form-container">
+                <form action="">
+                    <span class="input-name" data-value="账号"><input class="input-class" type="text" id="user-name" name="user-name" title="账号" /></span>
+                    <span class="input-name" data-value="密码"><input class="input-class" type="password" name="pw" id="pw" title="密码" /></span>
+                    <p class="ex clearfix">
+                        <label class="rem-wr" for="rem">
+                            <input id="rem" name="rem" type="checkbox"/>
+                            <span>记住我</span>
+                        </label>
+                        <a class="forget" href="javascript:void(0);">忘记密码</a>
+                    </p>
+                    <a href="##"><button class="submit" type="button">登陆二手街</button></a>
+                </form>
+                <a class="reg" href="javascript:void(0);">马上注册</a>
+            </div>
+<!--          <a class="close" href="javascript:void(0);">关闭</a>
+ -->    </div>
+    </div>
+
+    <div class="reg-cover">
+        <div class="reg-wr">
+            <div class="reg-header">
+                <img class="login-logo" src="static/image/logo.png" alt="logo"/>
+                <p class="site-name">校园二手街</p>
+            </div>
+            <div class="reg-form-container">
+                <form action="">
+                    <span class="input-name" data-value="用户名"><input class="input-class" type="text" id="uname" name="uname" title="用户名" /></span>
+                    <span class="input-name" data-value="邮箱"><input class="input-class" type="email" id="email" name="email" title="邮箱" /></span>
+                    <span class="input-name" data-value="密码"><input class="input-class" type="password" id="passw" name="passw" title="密码"/></span>
+                    <span class="input-name" data-value="确认密码"><input class="input-class" type="password" id="cpassw" name="cpassw" title="确认密码"/></span>
+                    <a href="##"><button type="button" class="submit">注册二手街</button></a>
+                </form>
+                <a class="log" href="javascript:void(0);">立即登录</a>
+            </div>
+            <a class="close" href="javascript:void(0);">关闭</a>
+        </div>
+    </div>
+    <script src="static/js/jquery-1.7.2.min.js"></script>
+    <script src="static/js/common.js"></script>
+    <script src="static/js/detail.js"></script>
+    <script type="text/javascript" src="http://widget.renren.com/js/rrshare.js"></script>
+    <script src="static/js/add.js"></script>
+</body>
+</html>
