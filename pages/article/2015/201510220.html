@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lily's lily - 我的文章</title>
+    <meta name="keywords" content="个人主页,个人网站,前端,设计,电影,生活" />
+    <meta name="description" content="Lily_Vain的个人主页，用于展示、记录、收集学习和生活中的美好的点滴。" />
+    <meta name="author" content="Lily_Vain，狐二十三" />
+    <link rel="Shortcut Icon" href="../../../liv.ico" />
+    <link href="../../../static/style/article.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+<body>
+
+
+
+
+<footer class="top-fixed">
+    <div class="top-content clearfix">
+        <div class="top-logo">
+            <a href="../../../" class="logo-pic">Lily's Lily</a>
+        </div>
+        <nav class="top-links">
+            <ul class="line">
+                <li><a href="../">文章</a></li>
+                <li><a href="../../works/">作品</a></li>
+                <li><a href="../../link">网址收集</a></li>
+                <li><a href="../../message">留言</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+<div class="main-container">
+    <div class="content-wrapper clearfix">
+        <div class="articles-header">
+            <hgroup>
+                <h1>Lily's Lily</h1>
+                <!-- <h2>——我的文章</h2> -->
+            </hgroup>
+
+        </div>
+
+        <div class="list-wrapper">
+            <article class="a-complete">
+                <time datetime="2015-10-22">
+                    <span class="time-date">12.05</span><br/>
+                    <span>Dec.</span><br/>
+                    <span>2014</span>
+                </time>
+                <div class="a-detail">
+                    <div class="a-label">Tag: &nbsp;<span></span></div>
+                    <h1 class="a-title">Java 数据类型和随机数</h1>
+                    <div class="a-text">
+                        <section>
+                            <h1>1. 整数类型</h1>
+                            <p>Java 提供四种整数类型：int --- 4 bytes --- –2,147,483,648 to 2,147,483, 647 (just over 2 billion)；short --- 2 bytes --- –32,768 to 32,767；long --- 8 bytes --- –9,223,372,036,854,775,808 to 9,223,372,036,854,775,807；byte --- 1 byte --- –128 to 127。
+                            </p>
+                            <p>注意 Java 没有任何无符号类型。</p>
+                        </section>
+
+                        <section>
+                            <h1>2. 随机数生成</h1>
+                            <p>一般计算机的随机数都是伪随机数，以一个真随机数（种子）作为初始条件，然后用一定的算法不停迭代产生随机数。一般种子可以选择为当前的系统时间，这是完全随机的。 </p>
+                            <p>java.util.Random 类用于生成一系列伪随机数。它使用一个48位的种子，which is modified using a linear congruential formula（线性同余）. <a href="http://docs.oracle.com/javase/8/docs/api/" target="_blank">API</a></p>
+                            <p>Random Constructors</p>
+                            <ul><li>public Random(long seed) --- Creates a new random number generator using a single long seed.</li></ul>
+                            <p>Random Methods</p>
+                            <ul>
+                                <li>public int nextInt(int bound) --- Returns a pseudorandom, uniformly distributed int value between 0 (inclusive) and the specified value (exclusive)</li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h1></h1>
+                            <p></p>
+                        </section>
+
+
+                    </div><!--div.a-text -->
+
+
+                </div>
+            </article>
+
+            <!-- 显示文章评论 -->
+            <section class="a-comment">
+                <h1 class="comment-title">最新评论.</h1>
+                <p></p>
+
+
+                <article class="comment-single">
+                    <p class="comm-name">From: <span>啊啊啊啊啊啊啊啊啊啊啊啊啊</span></p>
+                    <time datetime="2015-10-30 17:32:35">2015-10-30 17:32:35</time>
+                    <p class="comm-text">test</p>
+
+                </article>
+
+
+                <!-- 实现发表评论界面 -->
+                <form action="ArtReview" method="post" class="comm-form">
+                    <fieldset>
+                        <legend>发表评论</legend>
+                        <input name="action" value="review" type="hidden">
+                        <input name="rootId" value="26" type="hidden">
+                        <label for="revname">Name:</label>
+                        <input id="revname" name="revName" type="text" placeholder="昵称请不要多于10个字">
+                        <textarea name="artRContent" class="artRContent"></textarea>
+                        <input value="发表评论" type="submit" class="comm-submit">
+                    </fieldset>
+                </form>
+            </section>
+        </div><!-- div.list-wrapper -->
+
+
+        <aside>
+            <section>
+                <h1><span>导航</span></h1>
+                <ul>
+                    <li class="cata-single"><a href="../../../">首页</a></li>
+                    <li class="cata-single"><a href="../">文章</a></li>
+                    <li class="cata-single"><a href="../../works/">作品</a></li>
+                    <li class="cata-single"><a href="../../link">链接</a></li>
+                    <li class="cata-single"><a href="../../message">留言</a></li>
+                </ul>
+            </section>
+            <section>
+                <h1><span>分类</span></h1>
+                <ul>
+                    <li class="cata-single"><a href="">前端</a></li>
+                    <li class="cata-single"><a href="">绘画</a></li>
+                    <li class="cata-single"><a href="">数据库</a></li>
+                    <li class="cata-single"><a href="">读书笔记</a></li>
+                </ul>
+            </section>
+        </aside>
+    </div><!-- div.content-wrapper -->
+</div>
+
+
+
+<footer class="bottom-footer">
+    <ul class="line">
+        <li>Copyright &copy; 2012-2015</li>
+        <li><a href="">联系我</a></li>
+    </ul>
+</footer>
+</body>
+</html>

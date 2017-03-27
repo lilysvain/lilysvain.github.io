@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lily's lily - 我的文章</title>
+    <meta name="keywords" content="个人主页,个人网站,前端,设计,电影,生活" />
+    <meta name="description" content="Lily_Vain的个人主页，用于展示、记录、收集学习和生活中的美好的点滴。" />
+    <meta name="author" content="Lily_Vain，狐二十三" />
+    <link rel="Shortcut Icon" href="../../../liv.ico" />
+    <link href="../../../static/style/article.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+<body>
+
+<footer class="top-fixed">
+    <div class="top-content clearfix">
+        <div class="top-logo">
+            <a href="../../../" class="logo-pic">Lily's Lily</a>
+        </div>
+        <nav class="top-links">
+            <ul class="line">
+                <li><a href="../">文章</a></li>
+                <li><a href="../../works/">作品</a></li>
+                <li><a href="../../link">网址收集</a></li>
+                <li><a href="../../message">留言</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
+<div class="main-container">
+    <div class="content-wrapper clearfix">
+        <div class="articles-header">
+            <hgroup>
+                <h1>Lily's Lily</h1>
+                <!-- <h2>——我的文章</h2> -->
+            </hgroup>
+
+        </div>
+
+        <div class="list-wrapper">
+            <article class="a-complete">
+                <time datetime="2015-10-18">
+                    <span class="time-date">12.05</span><br/>
+                    <span>Dec.</span><br/>
+                    <span>2014</span>
+                </time>
+                <div class="a-detail">
+                    <div class="a-label">Tag: &nbsp;<span></span></div>
+                    <h1 class="a-title">字符编码</h1>
+                    <div class="a-text">
+                        <p>（来自维基百科）字符编码（Character Encoding）是把 字符集 中的 字符 编码为指定集合中某一对象（例如：比特模式、自然数序列、8位组或者电脉冲），以便文本在计算机中存储和通过通信网络的传递。常见的例子包括将拉丁字母表编码成摩斯电码和ASCII。其中，ASCII将字母、数字和其它符号编号，并用7比特的二进制来表示这个整数。通常会额外使用一个扩充的比特，以便于以1个字节的方式存储。</p>
+                        <p>在计算机技术发展的早期，如ASCII（1963年）和EBCDIC（1964年）这样的字符集逐渐成为标准。但这些字符集的局限很快就变得明显，于是人们开发了许多方法来扩展它们。</p>
+
+                        <section>
+                            <h1>ASCII（American Standard Code for Information Interchange，美国信息交换标准代码）</h1>
+                            <p>ASCII是基于拉丁字母的一套电脑编码系统，它主要用于显示现代英语。由于万维网使得ASCII广为通用，直到2007年12月，逐渐被Unicode取代。</p>
+                            <p>ASCII至今为止共定义了128个字元；其中33个字元无法显示，多数都已是陈废的控制字元。在33个字元之外的是95个可显示的字元，包含用键盘敲下空白键所产生的空白字元也算1个可显示字元。</p>
+                            <a href="https://zh.wikipedia.org/wiki/ASCII" target="_blank">ASCII 表</a>
+                        </section>
+
+                        <section>
+                            <h1>Unicode</h1>
+                            <p><a href="https://zh.wikipedia.org/wiki/Unicode" target="_blank">Unicode</a> 是计算机科学领域里的一项业界标准。它对世界上大部分的文字系统进行了整理、编码，至今仍在不断增修，每个新版本都加入更多新的字符。</p>
+                            <p>Unicode为了和现有电脑系统各自支持的编码方式相互兼容，其首256字元保留给<a href="https://zh.wikipedia.org/wiki/ISO/IEC_8859" target="_blank">ISO 8859-1</a>所定义的字元，并且把大量相同的字元重复编到不同的字元码中去，使得旧有纷杂的编码方式得以和Unicode编码间互相直接转换。</p>
+                            <p>在表示一个Unicode的字元时，通常会用“U+”然后紧接着一组十六进制的数字来表示。在<a href="https://zh.wikipedia.org/wiki/Unicode%E5%AD%97%E7%AC%A6%E5%B9%B3%E9%9D%A2%E6%98%A0%E5%B0%84#.E5.9F.BA.E6.9C.AC.E5.A4.9A.E6.96.87.E7.A7.8D.E5.B9.B3.E9.9D.A2" target="_blank">BMP</a>（“零号平面”）里的所有字元，要用四位十六进制数（例如U+4AE0，共支持六万多个字符）；在零号平面以外的字元则需要使用五位或六位十六进制数了。</p>
+                            <p>Unicode 的实现方式不同于编码方式。一个字符的Unicode编码是确定的。但是在实际传输过程中，由于不同系统平台的设计不一定一致，以及出于节省空间的目的，对Unicode编码的实现方式有所不同。Unicode的实现方式称为Unicode转换格式（Unicode Transformation Format，简称为UTF）（终于知道 UTF-8 是什么鬼了！）</p>
+                        </section>
+
+                        <section>
+                            <h1>UTF-8（8-bit Unicode Transformation Format）</h1>
+                            <p><a href="https://zh.wikipedia.org/wiki/UTF-8" target="_blank">UTF-8</a> 是一种可变长度字元编码。它可以用来表示Unicode标准中的任何字元，且其编码中的第一个字节仍与ASCII兼容。UTF-8使用一至四（六）个字节为每个字符编码。128个US-ASCII字符只需一个字节编码（Unicode范围由U+0000至U+007F）。UTF-8对所有常用的字元都可以用三个字节表示。</p>
+                            <p>互联网工程工作小组（IETF）要求所有互联网协议都必须支持UTF-8编码（XML及其子集XHTML采用UTF-8作为标准字集）；互联网邮件联盟（IMC）建议所有电子邮件软件都支持UTF-8编码。</p>
+                        </section>
+
+                        <section>
+                            <h1></h1>
+                            <p></p>
+                        </section>
+
+
+
+                    </div><!--div.a-text -->
+
+
+                </div>
+            </article>
+
+            <!-- 显示文章评论 -->
+            <section class="a-comment">
+                <h1 class="comment-title">最新评论.</h1>
+                <p>该文章目前没有任何评论！</p>
+
+                <!-- 实现发表评论界面 -->
+                <form action="ArtReview" method="post" class="comm-form">
+                    <fieldset>
+                        <legend>发表评论</legend>
+                        <input name="action" value="review" type="hidden">
+                        <input name="rootId" value="25" type="hidden">
+                        <label for="revname">Name:</label>
+                        <input id="revname" name="revName" type="text" placeholder="昵称请不要多于10个字">
+                        <textarea name="artRContent" class="artRContent"></textarea>
+                        <input value="发表评论" type="submit" class="comm-submit">
+                    </fieldset>
+                </form>
+            </section>
+        </div><!-- div.list-wrapper -->
+
+
+        <aside>
+            <section>
+                <h1><span>导航</span></h1>
+                <ul>
+                    <li class="cata-single"><a href="../../../">首页</a></li>
+                    <li class="cata-single"><a href="../">文章</a></li>
+                    <li class="cata-single"><a href="../../works/">作品</a></li>
+                    <li class="cata-single"><a href="../../link">链接</a></li>
+                    <li class="cata-single"><a href="../../message">留言</a></li>
+                </ul>
+            </section>
+            <section>
+                <h1><span>分类</span></h1>
+                <ul>
+                    <li class="cata-single"><a href="">前端</a></li>
+                    <li class="cata-single"><a href="">绘画</a></li>
+                    <li class="cata-single"><a href="">数据库</a></li>
+                    <li class="cata-single"><a href="">读书笔记</a></li>
+                </ul>
+            </section>
+        </aside>
+    </div><!-- div.content-wrapper -->
+</div>
+
+
+
+<footer class="bottom-footer">
+    <ul class="line">
+        <li>Copyright &copy; 2012-2015</li>
+        <li><a href="">联系我</a></li>
+    </ul>
+</footer>
+</body>
+</html>

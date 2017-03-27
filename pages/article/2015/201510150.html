@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lily's lily - 我的文章</title>
+    <meta name="keywords" content="个人主页,个人网站,前端,设计,电影,生活" />
+    <meta name="description" content="Lily_Vain的个人主页，用于展示、记录、收集学习和生活中的美好的点滴。" />
+    <meta name="author" content="Lily_Vain，狐二十三" />
+    <link rel="Shortcut Icon" href="../../../liv.ico" />
+    <link href="../../../static/style/article.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+<body>
+
+
+
+
+<footer class="top-fixed">
+    <div class="top-content clearfix">
+        <div class="top-logo">
+            <a href="../../../" class="logo-pic">Lily's Lily</a>
+        </div>
+        <nav class="top-links">
+            <ul class="line">
+                <li><a href="../">文章</a></li>
+                <li><a href="../../works/">作品</a></li>
+                <li><a href="../../link">网址收集</a></li>
+                <li><a href="../../message">留言</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+<div class="main-container">
+    <div class="content-wrapper clearfix">
+        <div class="articles-header">
+            <hgroup>
+                <h1>Lily's Lily</h1>
+                <!-- <h2>——我的文章</h2> -->
+            </hgroup>
+
+        </div>
+
+        <div class="list-wrapper">
+            <article class="a-complete">
+                <time datetime="2015-10-15">
+                    <span class="time-date">12.05</span><br/>
+                    <span>Dec.</span><br/>
+                    <span>2014</span>
+                </time>
+                <div class="a-detail">
+                    <div class="a-label">Tag: &nbsp;<span></span></div>
+                    <h1 class="a-title">Java Input and Output</h1>
+                    <div class="a-text">
+                        <section>
+                            <h1>1 Reading Input</h1>
+                            <p>在标准输出流（standard output stream，that is, the console window）中打印输出结果只需要调用 System.out.println。而从标准输入流（standard input stream）System.in 中读取数据却不是这么简单。读取数据台（console）,你首先需要创建一个和 System.in 联系的 Scanner：</p>
+                            <code>     Scanner in = new Scanner(System.in);</code>
+                            <p>接下来你可以使用 Scanner 类的多种方法读取输入。例如，nextLine 方法读取一行输入；next 方法读取单个单词（空白符隔开）；还有 nextInt、nextDouble 等。</p>
+                            <p><a href="http://docs.oracle.com/javase/8/docs/api/" target="_blank">查看API：</a>java.util.Scanner、java.lang.System、java.io.File、java.io.FileNotFoundException</p>
+                            <strong>java.util.Scanner</strong>
+                            <p>A Scanner breaks its input into tokens using a delimiter pattern, which by default matches whitespace.</p>
+                            <p><strong>Scanner 构造器：</strong></p>
+                            <ul>
+                                <li>Scanner(InputStream source, String charsetName)  ---  Constructs a new Scanner that produces values scanned from the specified input stream.</li>
+                                <li>Scanner(File source, String charsetName) throws FileNotFoundException --- Bytes from the file are converted into characters using the specified charset.</li>
+                            </ul>
+                            <p><strong>Scanner Methods：</strong></p>
+                            <ul>
+                                <li>public boolean hasNextLine()  --- This method may block while waiting for input.</li>
+                                <li>public Scanner useDelimiter(Pattern pattern) --- Sets this scanner's delimiting pattern to the specified pattern.</li>
+                                <li>public String next() --- Finds and returns the next complete token from this scanner. A complete token is preceded and followed by input that matches the delimiter pattern.</li>
+                                <li>public int nextInt() --- Scans the next token of the input as an int.</li>
+                            </ul>
+                            <p><strong>System Fields：</strong></p>
+                            <ul>
+                                <li>public static final InputStream in --- This stream is already open and ready to supply input data.</li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h1>2. 输入流和输出流的层次结构</h1>
+                            <a href="../../../static/images/article/101820151315090.jpg" target="_blank"><img src="../../../static/images/article/101820151315090.jpg" title="点开见大图" /></a>
+                            <p><a href="http://docs.oracle.com/javase/8/docs/api/" target="_blank">查看API：</a>java.io.BufferedInputStream</p>
+                            <p>BufferedInputStream构造器：</p>
+                            <ul>
+                                <li>BufferedInputStream(InputStream in) --- When the BufferedInputStream is created, an internal buffer array is created.</li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h1>3. Reader and Writer</h1>
+                            <p>Byte-oriented streams are inconvenient for processing information stored in Unicode (Unicode uses multiple bytes per character). Therefore, a separate hierarchy provides classes for processing Unicode characters that inherit from the abstract Reader and Writer classes. These classes have read and write operations that are based on two-byte Unicode code units.</p>
+                        </section>
+                    </div><!--div.a-text -->
+
+
+                </div>
+            </article>
+
+            <!-- 显示文章评论 -->
+            <section class="a-comment">
+                <h1 class="comment-title">最新评论.</h1>
+                <p>该文章目前没有任何评论！</p>
+
+                <!-- 实现发表评论界面 -->
+                <form action="ArtReview" method="post" class="comm-form">
+                    <fieldset>
+                        <legend>发表评论</legend>
+                        <input name="action" value="review" type="hidden">
+                        <input name="rootId" value="23" type="hidden">
+                        <label for="revname">Name:</label>
+                        <input id="revname" name="revName" type="text" placeholder="昵称请不要多于10个字">
+                        <textarea name="artRContent" class="artRContent"></textarea>
+                        <input value="发表评论" type="submit" class="comm-submit">
+                    </fieldset>
+                </form>
+            </section>
+        </div><!-- div.list-wrapper -->
+
+
+        <aside>
+            <section>
+                <h1><span>导航</span></h1>
+                <ul>
+                    <li class="cata-single"><a href="../../../">首页</a></li>
+                    <li class="cata-single"><a href="../">文章</a></li>
+                    <li class="cata-single"><a href="../../works/">作品</a></li>
+                    <li class="cata-single"><a href="../../link">链接</a></li>
+                    <li class="cata-single"><a href="../../message">留言</a></li>
+                </ul>
+            </section>
+            <section>
+                <h1><span>分类</span></h1>
+                <ul>
+                    <li class="cata-single"><a href="">前端</a></li>
+                    <li class="cata-single"><a href="">绘画</a></li>
+                    <li class="cata-single"><a href="">数据库</a></li>
+                    <li class="cata-single"><a href="">读书笔记</a></li>
+                </ul>
+            </section>
+        </aside>
+    </div><!-- div.content-wrapper -->
+</div>
+
+
+
+<footer class="bottom-footer">
+    <ul class="line">
+        <li>Copyright &copy; 2012-2015</li>
+        <li><a href="">联系我</a></li>
+    </ul>
+</footer>
+</body>
+</html>

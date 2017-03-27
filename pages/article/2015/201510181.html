@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lily's lily - 我的文章</title>
+    <meta name="keywords" content="个人主页,个人网站,前端,设计,电影,生活" />
+    <meta name="description" content="Lily_Vain的个人主页，用于展示、记录、收集学习和生活中的美好的点滴。" />
+    <meta name="author" content="Lily_Vain，狐二十三" />
+    <link rel="Shortcut Icon" href="../../../liv.ico" />
+    <link href="../../../static/style/article.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+<body>
+
+<footer class="top-fixed">
+    <div class="top-content clearfix">
+        <div class="top-logo">
+            <a href="../../../" class="logo-pic">Lily's Lily</a>
+        </div>
+        <nav class="top-links">
+            <ul class="line">
+                <li><a href="../">文章</a></li>
+                <li><a href="../../works/">作品</a></li>
+                <li><a href="../../link">网址收集</a></li>
+                <li><a href="../../message">留言</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+<div class="main-container">
+    <div class="content-wrapper clearfix">
+        <div class="articles-header">
+            <hgroup>
+                <h1>Lily's Lily</h1>
+                <!-- <h2>——我的文章</h2> -->
+            </hgroup>
+
+        </div>
+
+        <div class="list-wrapper">
+            <article class="a-complete">
+                <time datetime="2015-10-18">
+                    <span class="time-date">12.05</span><br/>
+                    <span>Dec.</span><br/>
+                    <span>2014</span>
+                </time>
+                <div class="a-detail">
+                    <div class="a-label">Tag: &nbsp;<span></span></div>
+                    <h1 class="a-title">正则表达式</h1>
+                    <div class="a-text">
+                        <p>在使用正则表达式（the regular expression）的各种程序和类库之间，表达式语法并未完全标准化。尽管在基本结构上达成了一致，但它们在细节上仍旧存在着许多令人抓狂的差异。该文中展示的是 java 语法中的正则表达式结构。</p>
+                        <section>
+                            <h1>java.util.regex.Pattern</h1>
+                            <p>A regular expression, specified as a string, must first be compiled into an instance of this class. The resulting pattern can then be used to create a Matcher object that can match arbitrary character sequences against the regular expression. </p>
+                            <p>A typical invocation（调用） sequence is thus：</p>
+<code>Pattern p = Pattern.compile("a*b");
+Matcher m = p.matcher("aaaaab");
+boolean b = m.matches();</code>
+                            <p>Note: 正则表达式字符串中如有“\”，须经过转义“\\”才能在compile方法中使用。</p>
+                            <strong>Pattern Methods<a href="http://docs.oracle.com/javase/8/docs/api/" target="_blank">API</a></strong>
+                            <ul>
+                                <li>public static Pattern compile(String regex) --- Compiles the given regular expression into a pattern.</li>
+                                <li>public String[] split(CharSequence input) --- Splits the given input sequence around matches of this pattern.</li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h1>Summary of regular-expression constructs</h1>
+                            <p>java.lang.Character classes</p>
+                            <ul>
+                                <li>\p{javaWhitespace} --- Equivalent to java.lang.Character.isWhitespace()</li>
+                            </ul>
+                            <p>Greedy quantifiers</p>
+                            <ul>
+                                <li>X+ --- X, one or more times</li>
+                            </ul>
+
+                            <p>Boundary matchers</p>
+                            <ul>
+                                <li>\A --- The beginning of the input</li>
+                            </ul>
+                        </section>
+                        </section>
+
+                        <section>
+                            <h1>空白符的问题</h1>
+                            <p>（public static boolean isWhitespace(char ch)）A character is a Java whitespace character if and only if it satisfies one of the following criteria:</p>
+                            <ul>
+                                <li>It is a Unicode space character (SPACE_SEPARATOR, LINE_SEPARATOR, or PARAGRAPH_SEPARATOR) but is not also a non-breaking space ('\u00A0', '\u2007', '\u202F').</li>
+                                <li>It is '\t', U+0009 HORIZONTAL TABULATION.</li>
+                                <li>It is '\n', U+000A LINE FEED.（换行）</li>
+                                <li>It is '\u000B', U+000B VERTICAL TABULATION.（换行）</li>
+                                <li>It is '\f', U+000C FORM FEED.（换页符、换行）</li>
+                                <li>It is '\r', U+000D CARRIAGE RETURN.（回车符，换行）</li>
+                                <li>It is '\u001C', U+001C FILE SEPARATOR.</li>
+                                <li>It is '\u001D', U+001D GROUP SEPARATOR.</li>
+                                <li>It is '\u001E', U+001E RECORD SEPARATOR.</li>
+                                <li>It is '\u001F', U+001F UNIT SEPARATOR.</li>
+                            </ul>
+                            <p>换行（newline，Line break，end-of-line（EOL））：换行字符可以看作是行的结束符，也可以看作行之间的分隔符，这两种处理方式之间存在一些歧义。如果换行字符被当作分隔符，那么文件的最后一行就不需要再有换行字符。但是多数系统的做法是在最后一行的后面也加上一个换行字符，也就是把换行字符看作是行的结束符。这样的程序在处理末行没有换行字符的文件时，可能会存在问题。相反地，有的程序把换行符看作分隔符，就会把最末尾的换行字符看作是新行的开始，也就是多出了一个空行。</p>
+                            <p>通常利用转义序列\n来换行。而回车键（or 确认键：carriage return）用以把一设备的位置重设到一行字的头。用\r来表示回车，依照操作系统的不同，有时会配合换行字符\n使用。</p>
+                        </section>
+
+                        <section>
+                            <h1></h1>
+                            <p></p>
+                        </section>
+
+
+
+
+
+
+
+
+                    </div><!--div.a-text -->
+
+
+                </div>
+            </article>
+
+            <!-- 显示文章评论 -->
+            <section class="a-comment">
+                <h1 class="comment-title">最新评论.</h1>
+                <p>该文章目前没有任何评论！</p>
+
+                <!-- 实现发表评论界面 -->
+                <form action="ArtReview" method="post" class="comm-form">
+                    <fieldset>
+                        <legend>发表评论</legend>
+                        <input name="action" value="review" type="hidden">
+                        <input name="rootId" value="24" type="hidden">
+                        <label for="revname">Name:</label>
+                        <input id="revname" name="revName" type="text" placeholder="昵称请不要多于10个字">
+                        <textarea name="artRContent" class="artRContent"></textarea>
+                        <input value="发表评论" type="submit" class="comm-submit">
+                    </fieldset>
+                </form>
+            </section>
+        </div><!-- div.list-wrapper -->
+
+
+        <aside>
+            <section>
+                <h1><span>导航</span></h1>
+                <ul>
+                    <li class="cata-single"><a href="../../../">首页</a></li>
+                    <li class="cata-single"><a href="../">文章</a></li>
+                    <li class="cata-single"><a href="../../works/">作品</a></li>
+                    <li class="cata-single"><a href="../../link">链接</a></li>
+                    <li class="cata-single"><a href="../../message">留言</a></li>
+                </ul>
+            </section>
+            <section>
+                <h1><span>分类</span></h1>
+                <ul>
+                    <li class="cata-single"><a href="">前端</a></li>
+                    <li class="cata-single"><a href="">绘画</a></li>
+                    <li class="cata-single"><a href="">数据库</a></li>
+                    <li class="cata-single"><a href="">读书笔记</a></li>
+                </ul>
+            </section>
+        </aside>
+    </div><!-- div.content-wrapper -->
+</div>
+
+
+
+<footer class="bottom-footer">
+    <ul class="line">
+        <li>Copyright &copy; 2012-2015</li>
+        <li><a href="">联系我</a></li>
+    </ul>
+</footer>
+</body>
+</html>

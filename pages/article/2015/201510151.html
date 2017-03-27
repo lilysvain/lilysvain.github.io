@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lily's lily - 我的文章</title>
+    <meta name="keywords" content="个人主页,个人网站,前端,设计,电影,生活" />
+    <meta name="description" content="Lily_Vain的个人主页，用于展示、记录、收集学习和生活中的美好的点滴。" />
+    <meta name="author" content="Lily_Vain，狐二十三" />
+    <link rel="Shortcut Icon" href="../../../liv.ico" />
+    <link href="../../../static/style/article.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+<body>
+
+<footer class="top-fixed">
+    <div class="top-content clearfix">
+        <div class="top-logo">
+            <a href="../../../" class="logo-pic">Lily's Lily</a>
+        </div>
+        <nav class="top-links">
+            <ul class="line">
+                <li><a href="../">文章</a></li>
+                <li><a href="../../works/">作品</a></li>
+                <li><a href="../../link">网址收集</a></li>
+                <li><a href="../../message">留言</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
+<div class="main-container">
+    <div class="content-wrapper clearfix">
+        <div class="articles-header">
+            <hgroup>
+                <h1>Lily's Lily</h1>
+                <!-- <h2>——我的文章</h2> -->
+            </hgroup>
+
+        </div>
+
+        <div class="list-wrapper">
+            <article class="a-complete">
+                <time datetime="2015-10-15">
+                    <span class="time-date">12.05</span><br/>
+                    <span>Dec.</span><br/>
+                    <span>2014</span>
+                </time>
+                <div class="a-detail">
+                    <div class="a-label">Tag: &nbsp;<span></span></div>
+                    <h1 class="a-title">Java 修饰符</h1>
+                    <div class="a-text">
+                        <p>Java 有一类被称为访问修饰符（access modifier）的关键字（keywords），如 public、private、protected；以及一类非访问修饰符 static、final 等。它们可以用于classes、methods 以及 variables上，不同组合会带来不同的效果，因而它们的使用极易造成混淆，我将在该文章中将对之进行总结。</p>
+                        <section>
+                            <h1>包作用域（Package Scope）</h1>
+                            <p>通常来说，被 public 标记的特征（features）可以被任何类使用，而 private features 只能被定义它们的类使用。如果你既没有指定 public 也没有指定 private，这个特征 (that is, the class, method, or variable) 可以被同一个包下的所有方法访问到。</p>
+                        </section>
+
+                        <section>
+                            <h1>Final Classes and Methods</h1>
+                            <p>不能被继承的类被称为 final classes，使用 final 修饰符定义一个 final class。final class 中的所有方法都是 final method，你也可以在非 final class 中定义 final method，这样子类就不能重写该方法。</p>
+                        </section>
+
+                        <section>
+                            <h1>静态方法（Static Methods）</h1>
+                            <p>静态方法不能对实例进行操作，没有 this 参数，不能访问实例域，但可以访问类的静态域。静态方法可直接通过类调用。</p>
+                            <p>main 方法【public static void main(String[] args)】是个静态方法。事实上，当一个程序运行初始，还没有任何对象存在，main 方法执行，开始构造程序所需的对象。因此 main 方法只能是静态方法。</p>
+                        </section>
+
+                        <section>
+                            <h1>私有域</h1>
+                            <p>举例说明：</p>
+                            <code>class Employee
+                                {
+                                public String getName()
+                                {
+                                return name;
+                                }
+                                public void setName(String name)
+                                {
+                                ...
+                                }
+                                private String name;
+                                private String salary;
+                                }
+                            </code>
+                            <p>实例域（instance fields）不加任何修饰符会默认为 package visible，而这样容易破坏封装性，而 private 关键字可以使得只有 Employee 类中的方法可以访问它们。当需要读写这些域的值时，需要使用访问器方法（accessor methods），如上例中的 getName、setName。
+                            </p>
+                        </section>
+
+                        <section>
+                            <h1>Protected Access</h1>
+                            <p>声明为 private 的特征对其余的类均不可见，然而，有时候我们希望一个 method 仅对子类可见，或者是允许子类的 methods 访问超类的域。在这样的情况下，就可以使用 protected 访问限制符。</p>
+                            <p>下面对Java的四种访问修饰符进行总结：</p>
+                            <ol>
+                                <li>Visible to the class only ( private)</li>
+                                <li>Visible to the world ( public)</li>
+                                <li>Visible to the package and all subclasses ( protected)</li>
+                                <li>Visible to the package—the (unfortunate) default.</li>
+                            </ol>
+                        </section>
+
+                        <section>
+                            <h1>常量（Constants）</h1>
+                            <p>我们使用关键字 final 去指定一个常量，例如：final double CM_PER_INCH = 2.54;（定义在方法中）</p>
+                            <p>我们通常希望一个常量可以被一个类中的多个方法访问，将之定义在类中，它们通常被称为类常量（class constants），设置类常量使用关键字 static final.。</p>
+                        </section>
+
+                        <section>
+                            <h1>static 的其余功能：</h1>
+                            <section>
+                                <h1>1. 导入静态方法/静态域</h1>
+                                <p>从 Java SE 5.0 开始，import 语句不仅仅可以导入类，而可以导入静态方法和静态域。例如：</p>
+                                <code>     import static java.lang.System.*;
+                                </code>
+                                <p>然后你便可以直接使用 System 类的静态方法和域而不需要类名前缀：</p>
+                                <code>     out.println("Goodbye, World!"); // i.e., System.out
+                                    exit(0); // i.e., System.exit
+                                </code>
+                                <p>还有两个更为适合使用静态导入的场合：</p>
+                                <ul>
+                                    <li>Mathematical functions:静态导入 Math 类，你能以更自然的方式使用这些数学公式，例如：sqrt(pow(x, 2) + pow(y, 2)) 看起来比 Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)) 更清晰。</li>
+                                    <li>Cumbersome constants:你可能会需要使用大量名字繁琐的常量，例如： (d.get(DAY_OF_WEEK) == MONDAY) 比 (d.get(Calendar.DAY_OF_WEEK) == Calendar.MONDAY) 看起来更轻松。</li>
+                                </ul>
+                                </p>
+                            </section>
+                            <section>
+                                <h1>2. 初始块</h1>
+                                <p>我们通常使用构造函数或者赋值声明来初始化一个值域。还有第三种机制——初始块，在实例化对象时，初始块中的代码先被执行，然后才会执行构造函数。如果是静态域需要复杂的初始化代码，使用静态初始化块，即在大括号前标记 static（静态初始化块仅在首次加载类时执行一次 ）。例如：</p>
+                                <code>class Employee
+                                    {
+                                    private static int nextId;
+                                    . . .
+                                    // object initialization block
+                                    static
+                                    {
+                                    Random generator = new Random();
+                                    nextId = generator.nextInt(10000);
+                                    }
+                                    }</code>
+                                <p></p>
+                            </section>
+                        </section>
+
+                        <section>
+                            <h1></h1>
+                            <p></p>
+                        </section>
+
+
+
+
+
+
+
+
+
+
+
+                    </div><!--div.a-text -->
+
+                </div>
+            </article>
+
+            <!-- 显示文章评论 -->
+            <section class="a-comment">
+                <h1 class="comment-title">最新评论.</h1>
+                <p>该文章目前没有任何评论！</p>
+
+                <!-- 实现发表评论界面 -->
+                <form action="ArtReview" method="post" class="comm-form">
+                    <fieldset>
+                        <legend>发表评论</legend>
+                        <input name="action" value="review" type="hidden">
+                        <input name="rootId" value="22" type="hidden">
+                        <label for="revname">Name:</label>
+                        <input id="revname" name="revName" type="text" placeholder="昵称请不要多于10个字">
+                        <textarea name="artRContent" class="artRContent"></textarea>
+                        <input value="发表评论" type="submit" class="comm-submit">
+                    </fieldset>
+                </form>
+            </section>
+        </div><!-- div.list-wrapper -->
+
+
+        <aside>
+            <section>
+                <h1><span>导航</span></h1>
+                <ul>
+                    <li class="cata-single"><a href="../../../">首页</a></li>
+                    <li class="cata-single"><a href="../">文章</a></li>
+                    <li class="cata-single"><a href="../../works/">作品</a></li>
+                    <li class="cata-single"><a href="../../link">链接</a></li>
+                    <li class="cata-single"><a href="../../message">留言</a></li>
+                </ul>
+            </section>
+            <section>
+                <h1><span>分类</span></h1>
+                <ul>
+                    <li class="cata-single"><a href="">前端</a></li>
+                    <li class="cata-single"><a href="">绘画</a></li>
+                    <li class="cata-single"><a href="">数据库</a></li>
+                    <li class="cata-single"><a href="">读书笔记</a></li>
+                </ul>
+            </section>
+        </aside>
+    </div><!-- div.content-wrapper -->
+</div>
+
+
+
+<footer class="bottom-footer">
+    <ul class="line">
+        <li>Copyright &copy; 2012-2015</li>
+        <li>鄂ICP备12010152号-1</li>
+        <li><a href="">联系我</a></li>
+    </ul>
+</footer>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lily's lily - 我的文章</title>
+    <meta name="keywords" content="个人主页,个人网站,前端,设计,电影,生活" />
+    <meta name="description" content="Lily_Vain的个人主页，用于展示、记录、收集学习和生活中的美好的点滴。" />
+    <meta name="author" content="Lily_Vain，狐二十三" />
+    <link rel="Shortcut Icon" href="liv.ico" />
+    <link href="../../../static/style/article.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+<body>
+
+<footer class="top-fixed">
+    <div class="top-content clearfix">
+        <div class="top-logo">
+            <a href="../../../" class="logo-pic">Lily's Lily</a>
+        </div>
+        <nav class="top-links">
+            <ul class="line">
+                <li><a href="../">文章</a></li>
+                <li><a href="../../works/">作品</a></li>
+                <li><a href="../../link">网址收集</a></li>
+                <li><a href="../../message">留言</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
+<div class="main-container">
+    <div class="content-wrapper clearfix">
+        <div class="articles-header">
+            <hgroup>
+                <h1>Lily's Lily</h1>
+                <!-- <h2>——我的文章</h2> -->
+            </hgroup>
+        </div>
+
+        <div class="list-wrapper">
+            <article class="a-complete">
+                <time datetime="2016-03-17">
+                    <span class="time-date">12.05</span><br/>
+                    <span>Dec.</span><br/>
+                    <span>2014</span>
+                </time>
+                <div class="a-detail">
+                    <div class="a-label">Tag: &nbsp;<span></span></div>
+                    <h1 class="a-title">Android 学习笔记</h1>
+                    <div class="a-text">
+                        <p>该文会记录在学习和开发 Android 时遇到的一些问题以及解决方案。欢迎提出你所遇到的问题（可在文章后留言），如果找到合适的解决方法或者可参考的资料，我会在文章后面进行更新。</p>
+
+                        <section>
+                            <h1>1. Android 开发环境配置</h1>
+                        </section>
+
+                        <section>
+                            <h1>2. 安装Genymotion插件</h1>
+                            <p>因为 IDEA 自带的 Emulator 莫名用不了，而且也不能模拟蓝牙的功能，就安装了个 Genymotion 用来试试。</p>
+                            <p>首先，要在自己的电脑上安装好 <a href="http://www.genymotion.net/" target="_blank">Genymotion</a>，然后在 IDEA 中选择 File --> Settings，选择 Plugins 并点击 Browse Repositories。接着在左侧列表里找到 Genymotion 并点击安装。安装好后 IDEA 重启，View --> Toolbar 可以打开插件工具栏。</p>
+                        </section>
+
+                        <section>
+                            <h1>3. SDK 版本选择及安装选项</h1>
+                            <p>运行你安装好的 SDK Manager，可以从中选择你要安装的包。</p>
+                            <p><strong>Android SDK Tools</strong> —— 这个运行你的SDK所必须的包（必装）</p>
+                            <p><strong>Android SDK Platform-tools</strong> —— 在第一次运行 SDK Manager 时就安装好了</p>
+                            <p><strong>SDK Platform</strong> —— 至少有一个平台被安装。例如选择 Android 6.0（API23）下的 SDK Platform（必装）</p>
+                            <p><strong>*** System Image</strong> —— 不同体系结构的系统映像，这样你就可以在 Android 模拟器上测试应用程序（选装）</p>
+                            <p>Google 官方强烈建议只用最新的 SDK 版本，新的 SDK 会提供更强大开发工具，编译的效率也更高。Android N 是2016年3月第一
+                                次发布的新版本，它的稳定版年中才会推出，因此我推荐你们安装 Android 6.0（API23）</p>
+                            <p>你的 APP 能运行的 Android 版本是由每一个项目的 minSDK 决定的，minSDK 的选择应该根据应用具体的 API 来，如果 app 没有
+                                使用新版本 SDK 提供的 API，那么选择旧版本反而能兼容更多机型。4.2（API 17）、4.1（API16） 及更早的都可以，只是在开发的
+                                过程中可能需要使用 support library，因此Extras 下的 “Android Support Library” 和 “Local Maven repository for Support Library” 也要安装上。</p>
+                            <p>SDK Manager 的包管理是非常灵活的，可以随时对包进行安装和删除，所以不用担心装多或者装错。（图中我也有一些安装多余的）</p>
+                        </section>
+                    </div><!--div.a-text -->
+                </div>
+            </article>
+
+            <!-- 显示文章评论 -->
+            <section class="a-comment">
+                <h1 class="comment-title">最新评论.</h1>
+                <p>该文章目前没有任何评论！</p>
+
+                <!-- 实现发表评论界面 -->
+                <form action="ArtReview" method="post" class="comm-form">
+                    <fieldset>
+                        <legend>发表评论</legend>
+                        <input name="action" value="review" type="hidden">
+                        <input name="rootId" value="30" type="hidden">
+                        <label for="revname">Name:</label>
+                        <input id="revname" name="revName" type="text" placeholder="昵称请不要多于10个字">
+                        <textarea name="artRContent" class="artRContent"></textarea>
+                        <input value="发表评论" type="submit" class="comm-submit">
+                    </fieldset>
+                </form>
+            </section>
+        </div><!-- div.list-wrapper -->
+
+
+        <aside>
+            <section>
+                <h1><span>导航</span></h1>
+                <ul>
+                    <li class="cata-single"><a href="../../../">首页</a></li>
+                    <li class="cata-single"><a href="../">文章</a></li>
+                    <li class="cata-single"><a href="../../works/">作品</a></li>
+                    <li class="cata-single"><a href="../../link">链接</a></li>
+                    <li class="cata-single"><a href="../../message">留言</a></li>
+                </ul>
+            </section>
+            <section>
+                <h1><span>分类</span></h1>
+                <ul>
+                    <li class="cata-single"><a href="">前端</a></li>
+                    <li class="cata-single"><a href="">绘画</a></li>
+                    <li class="cata-single"><a href="">数据库</a></li>
+                    <li class="cata-single"><a href="">读书笔记</a></li>
+                </ul>
+            </section>
+        </aside>
+    </div><!-- div.content-wrapper -->
+</div>
+
+
+
+<footer class="bottom-footer">
+    <ul class="line">
+        <li>Copyright &copy; 2012-2015</li>
+        <li><a href="">联系我</a></li>
+    </ul>
+</footer>
+</body>
+</html>
