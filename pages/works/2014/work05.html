@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lily's lily - 我的作品</title>
+    <meta name="keywords" content="个人主页,个人网站,前端,设计,电影,生活" />
+    <meta name="description" content="Lily_Vain的个人主页，用于展示、记录、收集学习和生活中的美好的点滴。" />
+    <meta name="author" content="Lily_Vain，狐二十三" />
+    <link rel="Shortcut Icon" href="../../../liv.ico" />
+    <link href="../../../static/style/article.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+<body>
+
+<footer class="top-fixed">
+    <div class="top-content clearfix">
+        <div class="top-logo">
+            <a href="../../../" class="logo-pic">Lily's Lily</a>
+        </div>
+        <nav class="top-links">
+            <ul class="line">
+                <li><a href="../../article/index.html">文章</a></li>
+                <li><a href="../../works/index.html">作品</a></li>
+                <li><a href="../../link/index.html">网址收集</a></li>
+                <li><a href="../../message/index.html">留言</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
+<div class="main-container">
+    <div class="content-wrapper clearfix">
+        <div class="articles-header">
+            <hgroup>
+                <h1>Lily's Lily</h1>
+                <!-- <h2>——我的作品</h2> -->
+            </hgroup>
+        </div>
+
+        <div class="list-wrapper">
+            <article class="w-complete">
+                <div class="a-detail">
+                    <div class="a-label">分类: &nbsp;<span>web</span></div>
+                    <h1 class="a-title">冰岩2014年春季招新</h1>
+                    <p class="work-dur">开始于：2014-02-27，结束于：2014-03-01
+                    </p>
+                    <a href="../../../works/zhaoxin/" target="_blank" class="work-src">作品链接</a>
+                    <div class="a-text">
+                        <section>
+                            <p>冰岩的春季招新通常都是小规模招，从开会讨论到完成这个页面，一共就一个星期吧。从设计师们的手上拿到图时，离预计上线的时间已经没两天了，一向不喜欢延期的我就有点心急了，加之拿到的只有整图，所有的动画效果只能自己想，结果就不太理想。</p>
+                            <p>也算是个经验教训，在合作项目时，最好是能参与到设计中去，向设计师们提清楚自己的需求，当确定好页面的所有动态效果时再开始动手写。</p>
+                            <p><img src="../../../static/images/work/030920152335430.png" style="float:left;margin-right:20px;"/>这次我还作死的让背景图满屏显示，但工厂的每一个小车间的定位就成了问题。因为背景图长这样<---，如果发生错位就会很难看。我是根据百分比，在获取窗口屏宽后根据计算定位。其实这种方法不好啦，因为获取的宽度会包括滚动条，并不是背景图的实际宽度，即使我获取的是元素宽度也是这样，可以减去滚动条宽度，但我无法保证每个平台每个浏览器的滚动条都是一样的。且当用户中途改变浏览器窗口大小时，还得绑定 resize 事件进行再次计算，而这次计算就无需考虑滚动条宽度了。这是浏览器渲染的小问题，但也是可以去深入了解下。</p>
+                            <p style="clear:both">还有窗口的 scrollTop 属性有点不好处理，可以好好总结一下。</p>
+                            <p>其实这个页面上还有一只萌萌的猫啊，可惜不容易被注意到，点击小猫页面会自动下滑的。</p>
+                        </section>
+                    </div><!--div.a-text -->
+                </div>
+            </article>
+
+            <!-- 显示文章评论 -->
+            <section class="a-comment">
+                <h1 class="comment-title">最新评论.</h1>
+                <p>该文章目前没有任何评论！</p>
+
+                <!-- 实现发表评论界面 -->
+                <form action="WorkReview" method="post" class="comm-form">
+                    <fieldset>
+                        <legend>发表评论</legend>
+                        <input name="action" value="review" type="hidden">
+                        <input name="rootId" value="14" type="hidden">
+                        <label for="revname">Name:</label>
+                        <input id="revname" name="revName" type="text" placeholder="昵称请不要多于10个字">
+                        <textarea name="workRContent" class="artRContent"></textarea>
+                        <input value="发表评论" type="submit" class="comm-submit">
+                    </fieldset>
+                </form>
+            </section>
+        </div><!-- div.list-wrapper -->
+
+
+        <aside>
+            <section>
+                <h1><span>导航</span></h1>
+                <ul>
+                    <li class="cata-single"><a href="../../../index.html">首页</a></li>
+                    <li class="cata-single"><a href="../../article/index.html">文章</a></li>
+                    <li class="cata-single"><a href="../../works/index.html">作品</a></li>
+                    <li class="cata-single"><a href="../../link/index.html">链接</a></li>
+                    <li class="cata-single"><a href="../../message/index.html">留言</a></li>
+                </ul>
+            </section>
+            <section>
+                <h1><span>分类</span></h1>
+                <ul>
+                    <li class="cata-single"><a href="">前端</a></li>
+                    <li class="cata-single"><a href="">绘画</a></li>
+                    <li class="cata-single"><a href="">数据库</a></li>
+                    <li class="cata-single"><a href="">读书笔记</a></li>
+                </ul>
+            </section>
+        </aside>
+    </div><!-- div.content-wrapper -->
+</div>
+
+
+
+<footer class="bottom-footer">
+    <ul class="line">
+        <li>Copyright &copy; 2012-2015</li>
+        <li><a href="">联系我</a></li>
+    </ul>
+</footer>
+</body>
+</html>

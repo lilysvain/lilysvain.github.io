@@ -19,8 +19,8 @@ window.onload = function(){
 		var computedStyle = document.defaultView.getComputedStyle(container, null);
 	}
 
-	alert("clientWidth: " + document.documentElement.clientWidth);
-	alert("computeWidth: "+ computedStyle.width);
+	//alert("clientWidth: " + document.documentElement.clientWidth);
+	//alert("computeWidth: "+ computedStyle.width);
 
 	var ratio = (parseInt(computedStyle.width)-16)/1280;
 	var bg_height = 2419 * ratio;
@@ -262,6 +262,6 @@ window.onload = function(){
     	popUp();
     })
     /*alert(navigator.userAgent);*/
-    alert("clientWidth: " + document.documentElement.clientWidth);
-	alert("computeWidth: "+ computedStyle.width);
+    //alert("clientWidth: " + document.documentElement.clientWidth);
+	//alert("computeWidth: "+ computedStyle.width);
 }

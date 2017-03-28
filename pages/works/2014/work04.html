@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lily's lily - 我的作品</title>
+    <meta name="keywords" content="个人主页,个人网站,前端,设计,电影,生活" />
+    <meta name="description" content="Lily_Vain的个人主页，用于展示、记录、收集学习和生活中的美好的点滴。" />
+    <meta name="author" content="Lily_Vain，狐二十三" />
+    <link rel="Shortcut Icon" href="../../../liv.ico" />
+    <link href="../../../static/style/article.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+<body>
+
+<footer class="top-fixed">
+    <div class="top-content clearfix">
+        <div class="top-logo">
+            <a href="../../../" class="logo-pic">Lily's Lily</a>
+        </div>
+        <nav class="top-links">
+            <ul class="line">
+                <li><a href="../../article/index.html">文章</a></li>
+                <li><a href="../../works/index.html">作品</a></li>
+                <li><a href="../../link/index.html">网址收集</a></li>
+                <li><a href="../../message/index.html">留言</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
+<div class="main-container">
+    <div class="content-wrapper clearfix">
+        <div class="articles-header">
+            <hgroup>
+                <h1>Lily's Lily</h1>
+                <!-- <h2>——我的作品</h2> -->
+            </hgroup>
+        </div>
+
+        <div class="list-wrapper">
+            <article class="w-complete">
+                <div class="a-detail">
+                    <div class="a-label">分类: &nbsp;<span>web</span></div>
+                    <h1 class="a-title">Selector---Web游戏</h1>
+                    <p class="work-dur">开始于：2014-05-24，结束于：2014-05-25
+                    </p>
+                    <a href="../../../works/moins/" target="_blank" class="work-src">作品链接</a>
+                    <div class="a-text">
+                        <section>
+                            <p>参加联创 Hack Day 时24小时开发的H5游戏。我们5个人，一产品一设计一后台一硬件，再上我写前端。</p>
+                            <p>我们的想法是做一个音乐类体感游戏：带上附有传感器的耳机，检测颈部的运动方向，和下落的音符做比较，一边听音乐放松一边运动颈部，也就是“颈椎病康复版的‘节奏大师’”。</p>
+                            <p>其实没有硬件支持，这个游戏现在是无法运行的，但是我真的很喜欢设计师小朋友的成果，就将用 WebSocket 从后台获取动作数据的部分改成了键盘操作。</p>
+                            <p>空格或按下“start”，就进入了校准页面，带上特制耳机跟着指示左偏头、点头、脸部面向左肩，因为后台那边需要记录这个数据，后面才能以此为标准作出动作的判断。</p>
+                            <p>接下来会进入选歌界面，左偏头是上一首，右偏头是下一首，点头是确定，其实还蛮有意思的。</p>
+                            <p>最后便进入游戏了，但因为歌曲的音符数据以前是用后台传送过来的，现在我也记不得这个数据，只模拟了几个音符。其实还有一个准确度的判断，有 perfect、great 和 miss 三个等级。整个游戏最难的部分其实就是用户数据和音乐数据相比较和准度判断了，因为用户是可能有重复动作和缺失动作的。</p>
+                            <p>当时记得直到上台答辩之前，我才改完最后一个 bug……我们还是第一个答辩和展示的组，当时其余各组还在抓紧时间开发自己的东西。不过最后我们的展示效果还不错，虽然只有第八名，还是很开心了~</p>
+                        </section>
+                    </div><!--div.a-text -->
+                </div>
+            </article>
+
+            <!-- 显示文章评论 -->
+            <section class="a-comment">
+                <h1 class="comment-title">最新评论.</h1>
+                <p>该文章目前没有任何评论！</p>
+
+                <!-- 实现发表评论界面 -->
+                <form action="WorkReview" method="post" class="comm-form">
+                    <fieldset>
+                        <legend>发表评论</legend>
+                        <input name="action" value="review" type="hidden">
+                        <input name="rootId" value="13" type="hidden">
+                        <label for="revname">Name:</label>
+                        <input id="revname" name="revName" type="text" placeholder="昵称请不要多于10个字">
+                        <textarea name="workRContent" class="artRContent"></textarea>
+                        <input value="发表评论" type="submit" class="comm-submit">
+                    </fieldset>
+                </form>
+            </section>
+        </div><!-- div.list-wrapper -->
+
+
+        <aside>
+            <section>
+                <h1><span>导航</span></h1>
+                <ul>
+                    <li class="cata-single"><a href="../../../index.html">首页</a></li>
+                    <li class="cata-single"><a href="../../article/index.html">文章</a></li>
+                    <li class="cata-single"><a href="../../works/index.html">作品</a></li>
+                    <li class="cata-single"><a href="../../link/index.html">链接</a></li>
+                    <li class="cata-single"><a href="../../message/index.html">留言</a></li>
+                </ul>
+            </section>
+            <section>
+                <h1><span>分类</span></h1>
+                <ul>
+                    <li class="cata-single"><a href="">前端</a></li>
+                    <li class="cata-single"><a href="">绘画</a></li>
+                    <li class="cata-single"><a href="">数据库</a></li>
+                    <li class="cata-single"><a href="">读书笔记</a></li>
+                </ul>
+            </section>
+        </aside>
+    </div><!-- div.content-wrapper -->
+</div>
+
+
+
+<footer class="bottom-footer">
+    <ul class="line">
+        <li>Copyright &copy; 2012-2015</li>
+        <li>鄂ICP备12010152号-1</li>
+        <li><a href="">联系我</a></li>
+    </ul>
+</footer>
+</body>
+</html>

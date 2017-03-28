@@ -1,0 +1,262 @@
+body,p{
+    margin: 0;
+    padding: 0;
+}
+
+.hide{
+    display: none;
+}
+
+#container{
+    position: absolute;
+    width: 100%;
+    background-color: #000;
+    overflow: hidden;
+}
+
+#loading,#start,#select,#grade{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+}
+
+#loading{
+    background-color:#fff;
+}
+
+#start{
+    background: #000 url(../image/start.png) no-repeat 100%;
+}
+
+#selector{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    margin-left: -330px;
+    width: 660px;
+    height: 58px;
+}
+
+@-webkit-keyframes flash {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+
+    25%, 75% {
+        opacity: 0.8;
+    }
+}
+
+@keyframes flash {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+
+    25%, 75% {
+        opacity: 0.8;
+    }
+}
+@-webkit-keyframes flash2 {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+
+    25%, 75% {
+        opacity: 0.7;
+    }
+}
+
+@keyframes flash2 {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+
+    25%, 75% {
+        opacity: 0.7;
+    }
+}
+
+#selector p{
+    width: 100%;
+    height: 100%;
+    background: transparent url(../image/selector.png) no-repeat;
+}
+#selector div{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent url(../image/selector_light.png) no-repeat;
+    animation: flash 2.8s linear infinite;
+}
+
+#start_container{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    margin-left: -114px;
+    width: 227px;
+    height: 60px;
+    cursor: pointer;
+}
+
+#start_bt{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-indent: -99em;
+    background: transparent url(../image/start_bt.png) no-repeat;
+}
+
+#start_light{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent url(../image/start_light.png) no-repeat;
+    -webkit-animation: flash 1.8s linear infinite;
+    animation: flash 1.8s linear infinite;
+}
+
+#cali_container{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin-left: -184px;
+    width:368px;
+    height: 280px;
+}
+#arrow{
+    width: 209px;
+    height: 209px;
+    margin: 0 auto;
+    background: transparent url(../image/arrow.png) no-repeat;
+    transition: transform 0.5s ease-in;
+}
+.down{
+    transform: rotate(-90deg);
+}
+.left2{
+    transform: rotate(0deg);
+}
+
+#calibration{
+    width: 100%;
+    height:40px;
+    position: absolute;
+    bottom: 0;
+    background: transparent url(../image/cali.png) no-repeat;
+}
+#cali_light{
+    width: 100%;
+    height: 100%;
+    background: transparent url(../image/cali_light.png) no-repeat;
+    -webkit-animation: flash2 1s linear infinite;
+    animation: flash2 1s linear infinite;
+}
+
+#drawing{
+    background: transparent url(../image/game_bg.png) no-repeat 100%;
+}
+
+#score_tip{
+    position: absolute;
+    width: 440px;
+    height: 186px;
+    top: 20%;
+    right: 0;
+    background: transparent url(../image/tips.png) no-repeat;
+}
+
+#container .perfect{
+    background-position: top;
+}
+#container .great{
+    background-position: center;
+}
+#container .miss{
+    background-position: bottom;
+}
+
+#grade{
+    background: transparent url(../image/grade_bg.png) no-repeat;
+}
+
+#back_container{
+    width: 923px;
+    height: 104px;
+    background: transparent url(../image/back_bt.png) no-repeat;
+    position: absolute;
+    left: 50%;
+    margin-left: -462px;
+    bottom: 0;
+}
+#back_container div{
+    cursor: pointer;
+    float: left;
+}
+
+#replay{
+    width: 313px;
+    height: 100%;
+}
+#gohome{
+    width: 610px;
+    height: 100%;
+}
+
+#select{
+    z-index: 0;
+    background: transparent url(../image/select_bg.png) no-repeat 100%;
+}
+
+#pic_container{
+    width: 930px;
+    height: 450px;
+    margin-left: -465px;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+}
+
+#select img{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 440px;
+    height: 440px;
+    margin: 0 240px;
+    display: block;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.9);
+    transition: transform 0.3s linear;
+    border: 5px solid #fff;
+}
+
+img.prev {
+    transform: translateX(-240px) scale(0.8);
+    opacity: 0.6;
+}
+img.select {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    z-index:1;
+}
+img.next {
+    transform: translateX(240px) scale(0.8);
+    opacity: 0.6;
+}
+img.none{
+    transform: translateX(0) scale(0.8);
+    opacity: 0.6;
+}
+
+#user_score{
+    font-size: 80px;
+    color: #fff;
+    position: absolute;
+    right: 35%;
+    top: 50%;
+    font-weight: bold;
+}

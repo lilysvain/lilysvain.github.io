@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lily's lily - 我的作品</title>
+    <meta name="keywords" content="个人主页,个人网站,前端,设计,电影,生活" />
+    <meta name="description" content="Lily_Vain的个人主页，用于展示、记录、收集学习和生活中的美好的点滴。" />
+    <meta name="author" content="Lily_Vain，狐二十三" />
+    <link rel="Shortcut Icon" href="../../../liv.ico" />
+    <link href="../../../static/style/article.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+<body>
+
+<footer class="top-fixed">
+    <div class="top-content clearfix">
+        <div class="top-logo">
+            <a href="../../../" class="logo-pic">Lily's Lily</a>
+
+        </div>
+        <nav class="top-links">
+            <ul class="line">
+                <li><a href="../../article/index.html">文章</a></li>
+                <li><a href="../../works/index.html">作品</a></li>
+                <li><a href="../../link/index.html">网址收集</a></li>
+                <li><a href="../../message/index.html">留言</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
+<div class="main-container">
+    <div class="content-wrapper clearfix">
+        <div class="articles-header">
+            <hgroup>
+                <h1>Lily's Lily</h1>
+                <!-- <h2>——我的作品</h2> -->
+            </hgroup>
+        </div>
+
+        <div class="list-wrapper">
+            <article class="w-complete">
+                <div class="a-detail">
+                    <div class="a-label">分类: &nbsp;<span>web</span></div>
+                    <h1 class="a-title">圣诞Jump---Web游戏</h1>
+                    <p class="work-dur">开始于：2013-12-05，结束于：2013-12-25
+                    </p>
+                    <a href="../../../works/santa/" target="_blank" class="work-src">作品链接</a>
+                    <div class="a-text">
+                        <section>
+                            <p>这款游戏是由团队在13年的圣诞节推出的，参与游戏的同学们还会进行分数排名，并对前几名提供奖品，比较有意思的就是，我也拿到奖品啦~~~哈哈，没办法，我一定是玩这个游戏最久的人了。</p>
+                            <p>其实这是我写的第一个 H5 游戏，也是进冰岩后参与的第一个项目。最初还有点害怕自己无法按期完成，因为圣诞三周前我HTML5+CSS3还没怎么接触过，Js没怎么动手写过。在这里要感谢一下二次元学长，他很热心的提示我游戏该怎么实现，虽然最初我不大能听懂；还有碰到物理逻辑上的问题时，他帮我理清了下。</p>
+                            <p>差不多看了一个多星期的书，真正花在写代码上的时间其实要比学习的时间短，所以大致完成的还比较早，我还试着加上了背景乐和音效。做背景乐时也比较有意思，我是从虾米上下载了一个电影配乐，因为我觉得好听，结果音乐文件太大了，浏览器加载会很成问题，于是我又学着自己进行音乐剪辑和格式转换。</p>
+                            <p>其实最大的问题出现在了上线测试后，当时只顾着前端实现了，完全没有考虑到安全性的问题，结果出现了个别人刷分的情况，但由于时间紧急，只能进行简单处理。当时都没想到Js文件的压缩加密等，也是自己在前端方面还不够成熟。</p>
+                        </section>
+                    </div><!--div.a-text -->
+
+
+                </div>
+            </article>
+
+            <!-- 显示文章评论 -->
+            <section class="a-comment">
+                <h1 class="comment-title">最新评论.</h1>
+                <p>该文章目前没有任何评论！</p>
+
+                <!-- 实现发表评论界面 -->
+                <form action="WorkReview" method="post" class="comm-form">
+                    <fieldset>
+                        <legend>发表评论</legend>
+                        <input name="action" value="review" type="hidden">
+                        <input name="rootId" value="12" type="hidden">
+                        <label for="revname">Name:</label>
+                        <input id="revname" name="revName" type="text" placeholder="昵称请不要多于10个字">
+                        <textarea name="workRContent" class="artRContent"></textarea>
+                        <input value="发表评论" type="submit" class="comm-submit">
+                    </fieldset>
+                </form>
+            </section>
+        </div><!-- div.list-wrapper -->
+
+
+        <aside>
+            <section>
+                <h1><span>导航</span></h1>
+                <ul>
+                    <li class="cata-single"><a href="../../../index.html">首页</a></li>
+                    <li class="cata-single"><a href="../../article/index.html">文章</a></li>
+                    <li class="cata-single"><a href="../../works/index.html">作品</a></li>
+                    <li class="cata-single"><a href="../../link/index.html">链接</a></li>
+                    <li class="cata-single"><a href="../../message/index.html">留言</a></li>
+                </ul>
+            </section>
+            <section>
+                <h1><span>分类</span></h1>
+                <ul>
+                    <li class="cata-single"><a href="">前端</a></li>
+                    <li class="cata-single"><a href="">绘画</a></li>
+                    <li class="cata-single"><a href="">数据库</a></li>
+                    <li class="cata-single"><a href="">读书笔记</a></li>
+                </ul>
+            </section>
+        </aside>
+    </div><!-- div.content-wrapper -->
+</div>
+
+
+
+<footer class="bottom-footer">
+    <ul class="line">
+        <li>Copyright &copy; 2012-2015</li>
+        <li><a href="">联系我</a></li>
+    </ul>
+</footer>
+</body>
+</html>
