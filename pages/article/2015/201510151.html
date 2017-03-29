@@ -68,20 +68,20 @@
                         <section>
                             <h1>私有域</h1>
                             <p>举例说明：</p>
-                            <code>class Employee
-                                {
-                                public String getName()
-                                {
-                                return name;
-                                }
-                                public void setName(String name)
-                                {
-                                ...
-                                }
-                                private String name;
-                                private String salary;
-                                }
-                            </code>
+<code>class Employee
+{
+    public String getName()
+    {
+        return name;
+    }
+    public void setName(String name)
+    {
+        ...
+    }
+    private String name;
+    private String salary;
+}
+</code>
                             <p>实例域（instance fields）不加任何修饰符会默认为 package visible，而这样容易破坏封装性，而 private 关键字可以使得只有 Employee 类中的方法可以访问它们。当需要读写这些域的值时，需要使用访问器方法（accessor methods），如上例中的 getName、setName。
                             </p>
                         </section>
@@ -125,17 +125,17 @@
                             <section>
                                 <h1>2. 初始块</h1>
                                 <p>我们通常使用构造函数或者赋值声明来初始化一个值域。还有第三种机制——初始块，在实例化对象时，初始块中的代码先被执行，然后才会执行构造函数。如果是静态域需要复杂的初始化代码，使用静态初始化块，即在大括号前标记 static（静态初始化块仅在首次加载类时执行一次 ）。例如：</p>
-                                <code>class Employee
-                                    {
-                                    private static int nextId;
-                                    . . .
-                                    // object initialization block
-                                    static
-                                    {
-                                    Random generator = new Random();
-                                    nextId = generator.nextInt(10000);
-                                    }
-                                    }</code>
+<code>class Employee
+{
+    private static int nextId;
+    . . .
+    // object initialization block
+    static
+    {
+        Random generator = new Random();
+        nextId = generator.nextInt(10000);
+    }
+}</code>
                                 <p></p>
                             </section>
                         </section>
@@ -144,16 +144,6 @@
                             <h1></h1>
                             <p></p>
                         </section>
-
-
-
-
-
-
-
-
-
-
 
                     </div><!--div.a-text -->
 
