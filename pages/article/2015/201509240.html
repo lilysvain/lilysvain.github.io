@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lily's lily - 我的文章</title>
+    <meta name="keywords" content="个人主页,个人网站,前端,设计,电影,生活" />
+    <meta name="description" content="Lily_Vain的个人主页，用于展示、记录、收集学习和生活中的美好的点滴。" />
+    <meta name="author" content="Lily_Vain，狐二十三" />
+    <link rel="Shortcut Icon" href="../../../liv.ico" />
+    <link href="../../../static/style/article.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+<body>
+
+<footer class="top-fixed">
+    <div class="top-content clearfix">
+        <div class="top-logo">
+            <a href="../../../" class="logo-pic">Lily's Lily</a>
+
+        </div>
+        <nav class="top-links">
+            <ul class="line">
+                <li><a href="../">文章</a></li>
+                <li><a href="../../works/">作品</a></li>
+                <li><a href="../../link">网址收集</a></li>
+                <li><a href="../../message">留言</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
+<div class="main-container">
+    <div class="content-wrapper clearfix">
+        <div class="articles-header">
+            <hgroup>
+                <h1>Lily's Lily</h1>
+                <!-- <h2>——我的文章</h2> -->
+            </hgroup>
+
+        </div>
+
+        <div class="list-wrapper">
+            <article class="a-complete">
+                <time datetime="2015-09-24">
+                    <span class="time-date">12.05</span><br/>
+                    <span>Dec.</span><br/>
+                    <span>2014</span>
+                </time>
+                <div class="a-detail">
+                    <div class="a-label">Tag: &nbsp;<span></span></div>
+                    <h1 class="a-title">IntelliJ IDEA 笔记</h1>
+                    <div class="a-text">
+                        <p>作死的又改了tomcat和java版本，新装的eclipse怎么都没配置好，导入原来的工程一直没有编译成功，好吧，我承认我是没有耐心去找问题又是出在哪里，决定换个Java IDE用用得了！听人说 IDEA挺好的，加上我前端用的也是JetBrains 的 Webstorm，界面倒很是熟悉的，想来上手也不慢。边用边记录着，省着我下次重装系统或软件时又需要回忆着设置各种选项。</p>
+                        <section>
+                            <h1>创建 Web 项目</h1>
+                            <p>1、File -> New Project </p>
+                            <img src="../../../static/images/article/092420152025240.jpg" />
+                            <p>设置好自己的tomcat和java安装目录，修改Project location，这样工程可以建好了。</p>
+                            <p>在WEB-INF目录下再创建classes和lib两个目录。</p>
+                            <p>2、修改 Project Structure</p>
+                            <p>File -> Project Structure 窗口中，点击 Modules -> 切换到 Paths 选项卡 -> 勾选 “Use module compile output path”，将 “Output path” 和 “Test output path” 都改为之前创建的classes目录。</p>
+                            <p>切换到 Dependencies 选项卡 -> 点击右边的“+”，选择 “JARs or directories”</p>
+                            <img src="../../../static/images/article/092420152044520.png" />
+                            <p>ok之后，选择文件类型为 Jar Directory。至于为什么要像前面那么干还是很容易理解的，就不解释了~</p>
+                            <p>最后，将已有的项目文件和代码依次复制过来，启动tomcat就都ok了~感觉的确比eclipse好用……</p>
+                        </section>
+
+                        <section>
+                            <h1></h1>
+                            <p></p>
+                        </section>
+
+
+
+
+
+
+
+                    </div><!--div.a-text -->
+
+
+                </div>
+            </article>
+
+            <!-- 显示文章评论 -->
+            <section class="a-comment">
+                <h1 class="comment-title">最新评论.</h1>
+                <p></p>
+
+
+                <article class="comment-single">
+                    <p class="comm-name">From: <span>Reply to bug</span></p>
+                    <time datetime="2015-10-15 16:26:44">2015-10-15 16:26:44</time>
+                    <p class="comm-text">要不你以为你是什么……</p>
+
+                </article>
+
+                <article class="comment-single">
+                    <p class="comm-name">From: <span>bug</span></p>
+                    <time datetime="2015-10-12 23:16:25">2015-10-12 23:16:25</time>
+                    <p class="comm-text">原来我是个人！</p>
+
+                </article>
+
+                <article class="comment-single">
+                    <p class="comm-name">From: <span>nature's prophet</span></p>
+                    <time datetime="2015-09-25 05:48:54">2015-09-25 05:48:54</time>
+                    <p class="comm-text">确实比eclipse好用 就连android studio也改成intellij framework了 更加简洁好用的界面和完整的提示信息</p>
+
+                </article>
+
+
+                <!-- 实现发表评论界面 -->
+                <form action="ArtReview" method="post" class="comm-form">
+                    <fieldset>
+                        <legend>发表评论</legend>
+                        <input name="action" value="review" type="hidden">
+                        <input name="rootId" value="21" type="hidden">
+                        <label for="revname">Name:</label>
+                        <input id="revname" name="revName" type="text" placeholder="昵称请不要多于10个字">
+                        <textarea name="artRContent" class="artRContent"></textarea>
+                        <input value="发表评论" type="submit" class="comm-submit">
+                    </fieldset>
+                </form>
+            </section>
+        </div><!-- div.list-wrapper -->
+
+
+        <aside>
+            <section>
+                <h1><span>导航</span></h1>
+                <ul>
+                    <li class="cata-single"><a href="../../../">首页</a></li>
+                    <li class="cata-single"><a href="../">文章</a></li>
+                    <li class="cata-single"><a href="../../works/">作品</a></li>
+                    <li class="cata-single"><a href="../../link">链接</a></li>
+                    <li class="cata-single"><a href="../../message">留言</a></li>
+                </ul>
+            </section>
+            <section>
+                <h1><span>分类</span></h1>
+                <ul>
+                    <li class="cata-single"><a href="">前端</a></li>
+                    <li class="cata-single"><a href="">绘画</a></li>
+                    <li class="cata-single"><a href="">数据库</a></li>
+                    <li class="cata-single"><a href="">读书笔记</a></li>
+                </ul>
+            </section>
+        </aside>
+    </div><!-- div.content-wrapper -->
+</div>
+
+
+
+<footer class="bottom-footer">
+    <ul class="line">
+        <li>Copyright &copy; 2012-2015</li>
+        <li><a href="">联系我</a></li>
+    </ul>
+</footer>
+</body>
+</html>
