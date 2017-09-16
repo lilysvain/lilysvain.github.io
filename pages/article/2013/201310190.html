@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lily's lily - 我的文章</title>
+    <meta name="keywords" content="个人主页,个人网站,前端,设计,电影,生活" />
+    <meta name="description" content="Lily_Vain的个人主页，用于展示、记录、收集学习和生活中的美好的点滴。" />
+    <meta name="author" content="Lily_Vain，狐二十三" />
+    <link rel="Shortcut Icon" href="../../../liv.ico" />
+    <link href="../../../static/style/article.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+<body>
+
+
+
+
+<footer class="top-fixed">
+    <div class="top-content clearfix">
+        <div class="top-logo">
+            <a href="../../../" class="logo-pic">Lily's Lily</a>
+
+        </div>
+        <nav class="top-links">
+            <ul class="line">
+                <li><a href="../">文章</a></li>
+                <li><a href="../../works/">作品</a></li>
+                <li><a href="../../link">网址收集</a></li>
+                <li><a href="../../message">留言</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+<div class="main-container">
+    <div class="content-wrapper clearfix">
+        <div class="articles-header">
+            <hgroup>
+                <h1>Lily's Lily</h1>
+                <!-- <h2>——我的文章</h2> -->
+            </hgroup>
+
+        </div>
+
+        <div class="list-wrapper">
+            <article class="a-complete">
+                <time datetime="2013-10-19">
+                    <span class="time-date">12.05</span><br/>
+                    <span>Dec.</span><br/>
+                    <span>2014</span>
+                </time>
+                <div class="a-detail">
+                    <div class="a-label">Tag: &nbsp;<span>Web</span></div>
+                    <h1 class="a-title">表单元素整理</h1>
+                    <div class="a-text">
+                        <p>网页中表单的应用非常广泛，在此做个总结，方便以后查阅。</p>
+                        <p>由于我的网站后台写的比较渣，编辑功能比较粗糙，因此文章中如若包含 < 和 > 符号，在第二次编辑后会非常容易出问题，只好在代码中以 “[ /]” 代替，如若带来阅读上的不便还望谅解，之后如果想到好的办法我会再进行更改。</p>
+                        <section>
+                            <h1>1. form 标签</h1>
+                            <p>用于向服务器传输数据。</p>
+                            <p>必需的属性： action 属性规定当提交表单时，向何处发送表单数据。</p>
+                            <p>可选的属性：</p>
+                            <ul>
+                                <li>enctype ：规定在发送到服务器之前应该如何对表单数据进行编码。application/x-www-form-urlencoded：在发送前编码所有字符（默认）；multipart/form-data：不对字符编码，在使用包含文件上传控件的表单时，必须使用该值；text/plain：空格转换为 "+" 加号，但不对特殊字符编码。</li>
+                                <li>method：post、get</li>
+                                <li>name ：form 元素的 name 属性提供了一种在脚本中引用表单的方法。</li>
+                            </ul>
+                            <code>
+[form action="#" method="post" name="myForm"]
+    [fieldset]
+        [legend]标题[/legend]
+        [label for="username"]Name:[/label]
+        [input type="text" id="username" /]
+        [label for="password"]Password:[/label]
+        [input type="password" id="password" /]
+        [input type="submit" value="submit" class="button" /]
+    [/fieldset]
+[/form]
+                            </code>
+                        </section>
+                        <section>
+                            <h1>2. fieldset 标签</h1>
+                            <p>将表单内容的一部分打包，生成一组相关表单的字段。[legend] 标签为 fieldset 元素定义标题。</p>
+                        </section>
+                        <section>
+                            <h1>3. label 标签</h1>
+                            <p>为 input 元素定义标注（标记）。为鼠标用户改进了可用性，如果在 label 元素内点击文本，浏览器就会自动将焦点转到和标签相关的表单控件上。[label] 标签的 for 属性应当与相关元素的 id 属性相同。</p>
+                        </section>
+                        <section>
+                            <h1>4. input 标签</h1>
+                            <p>基本属性：</p>
+                            <ul>
+                                <li>name ：用于对提交到服务器后的表单数据进行标识，或者在客户端通过 JavaScript 引用表单数据。只有设置了 name 属性的表单元素才能在提交表单时传递它们的值。</li>
+                                <li>size ：规定输入字段的宽度。对于 [input type="text"] 和 [input type="password"]，size 属性定义的是可见的字符数。而对于其他类型是以像素为单位的输入字段宽度。</li>
+                                <li>disabled ：规定应该禁用 input 元素。被禁用的 input 元素既不可用，也不可点击。可以设置 disabled 属性，直到满足某些其他的条件为止（比如选择了一个复选框等等）。</li>
+                            </ul>
+                            <code>
+[input type="text" name="input" size="30" maxlength="5" value="input" readonly="readonly" /]
+                            </code>
+                            <ul>
+                                <li>maxlength ：规定输入字段的最大长度，以字符个数计。</li>
+                                <li>readonly：规定输入字段为只读。用户仍然可以使用 tab 键切换到该字段，还可以选中或拷贝其文本。</li>
+                                <li>value：定义输入字段的初始值</li>
+                            </ul>
+                            <code>
+[input type="button" name="button" value="button" /]
+[input type="submit" name="submit" value="submit" /]
+[input type="reset" name="reset" value="reset" /]
+                            </code>
+                            <p>button：可点击按钮，但没有任何行为。button 类型常用于在用户点击按钮时启动 JavaScript 程序。</p>
+                            <p>reset：重置按钮会清除表单中的所有数据。</p>
+                            <p>Submit：提交按钮用于向服务器发送表单数据。数据会发送到表单的 action 属性中指定的页面。</p>
+                            <code>
+[input type="file" name="upload" /]
+                            </code>
+                            <code>
+[input type="checkbox" name="select" checked="checked" value="1"/]select 1
+[input type="checkbox" name="select" value="2"/]select 2
+[input type="checkbox" name="select" value="3"/]select 3
+                            </code>
+                            <ul>
+                                <li>checked ：规定在页面加载时应该被预先选定的 input 元素。</li>
+                                <li>value：定义与输入相关联的值。必须设置。</li>
+                            </ul>
+                            <code>
+[input type="image" src="" alt="图像形式的提交按钮" value="submit"/]
+                            </code>
+                            <ul>
+                                <li>alt ：为图像输入规定替代文本。</li>
+                                <li>src ：规定作为提交按钮显示的图像的 URL。</li>
+                                <li>value：定义与输入相关联的值。</li>
+                            </ul>
+                            <code>
+[input type="hidden" value="隐藏默认值"/]
+                            </code>
+                            <p>隐藏字段对于用户是不可见的。隐藏字段通常会存储一个默认值（value），它们的值也可以由 JavaScript 进行修改。</p>
+                        </section>
+                        <section>
+                            <h1>5. textarea 标签</h1>
+                            <code>
+[textarea type="hidden" name="enter" cols="10" rows="3"][/textarea]
+                            </code>
+                            <p>多行的文本输入控件。可以通过 cols 和 rows 属性来规定 textarea 的尺寸，不过更好的办法是使用 CSS 的 height 和 width 属性。</p>
+                            <ul>
+                                <li>wrap 属性：用户在输入文本区域中键入文本后，浏览器会将它们按照键入时的状态发送给服务器。只有用户按下 Enter 键的地方生成换行。如果您希望启动自动换行功能（word wrapping），请将 wrap 属性设置为 virtual 或 physical。
+                                    <ul>
+                                        <li>wrap="virtual" ：传输给服务器时，文本只在用户按下 Enter 键的地方进行换行，否则只有一行文本被传送到服务器，没有嵌入新行字符。</li>
+                                        <li>wrap="physical" ：将实现文本区内的自动换行，并以这种形式传送给服务器，就像用户真的那样键入的。</li>
+                                        <li>如果把 wrap 设置为 off，将得到默认的动作。</li>
+                                        <li>如果设置为 wrap="wrap"，文本区会包含一行文本，用户必须将光标移动到右边才能看到全部文本，这时将把一行文本传送给服务器。</li>
+                                    </ul>
+                                </li>
+                                <li>disabled、name、readonly属性同上</li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h1>6. select 标签</h1>
+                            <code>
+[select]
+    [optgroup label="Swedish Cars"]
+        [option value ="volvo"]Volvo[/option]
+        [option value ="saab" selected="selected"]Saab[/option]
+    [/optgroup]
+[/select]
+                            </code>
+                            <p>[select]创建单选或多选菜单。当提交表单时，浏览器会提交选定的项目，或者收集用逗号分隔的多个选项，将其合成一个单独的参数列表。</p>
+                            <ul>
+                                <li>multiple = "multiple"：规定可同时选择多个选项。对用户更友好的方式是使用复选框。</li>
+                                <li>size ：规定下拉列表中可见选项的数目。如果 size 属性的值大于 1，但是小于列表中选项的总数目，浏览器会显示出滚动条。</li>
+                                <li>disabled、name属性同上</li>
+                            </ul>
+                            <p>[optgroup]标签用于组合选项。当您使用一个长的选项列表时，对相关的选项进行组合会使处理更加容易。必需的属性：lable - 为选项组规定描述。</p>
+                        </section>
+                        <section>
+                            <h1>7. [button]标签</h1>
+                            <p>[button]控件与[input type="button"]相比，提供了更为强大的功能和更丰富的内容。[button]与[/button]标签之间的所有内容都是按钮的内容，比如文本或多媒体内容。</p>
+                            <p>唯一禁止使用的元素是图像映射，因为它对鼠标和键盘敏感的动作会干扰表单按钮的行为。</p>
+                            <p>请始终为按钮规定 type 属性。Internet Explorer 的默认类型是 "button"，而其他浏览器中（包括 W3C 规范）的默认值是 "submit"。</p>
+                            <p>如果在 HTML 表单中使用 button 元素，不同的浏览器会提交不同的值。Internet Explorer 将提交 [button]与[/button] 之间的文本，而其他浏览器将提交 value 属性的内容。请在 HTML 表单中使用 input 元素来创建按钮。</p>
+                            <ul>
+                                <li>type属性：button、reset、submit</li>
+                                <li>disabled、name、value属性同上</li>
+                            </ul>
+                        </section>
+
+
+
+
+                    </div><!--div.a-text -->
+
+
+                </div>
+            </article>
+
+            <!-- 显示文章评论 -->
+            <section class="a-comment">
+                <h1 class="comment-title">最新评论.</h1>
+                <p>该文章目前没有任何评论！</p>
+
+                <!-- 实现发表评论界面 -->
+                <form action="ArtReview" method="post" class="comm-form">
+                    <fieldset>
+                        <legend>发表评论</legend>
+                        <input name="action" value="review" type="hidden">
+                        <input name="rootId" value="7" type="hidden">
+                        <label for="revname">Name:</label>
+                        <input id="revname" name="revName" type="text" placeholder="昵称请不要多于10个字">
+                        <textarea name="artRContent" class="artRContent"></textarea>
+                        <input value="发表评论" type="submit" class="comm-submit">
+                    </fieldset>
+                </form>
+            </section>
+        </div><!-- div.list-wrapper -->
+
+
+        <aside>
+            <section>
+                <h1><span>导航</span></h1>
+                <ul>
+                    <li class="cata-single"><a href="../../../">首页</a></li>
+                    <li class="cata-single"><a href="../">文章</a></li>
+                    <li class="cata-single"><a href="../../works/">作品</a></li>
+                    <li class="cata-single"><a href="../../link">链接</a></li>
+                    <li class="cata-single"><a href="../../message">留言</a></li>
+                </ul>
+            </section>
+            <section>
+                <h1><span>分类</span></h1>
+                <ul>
+                    <li class="cata-single"><a href="">前端</a></li>
+                    <li class="cata-single"><a href="">绘画</a></li>
+                    <li class="cata-single"><a href="">数据库</a></li>
+                    <li class="cata-single"><a href="">读书笔记</a></li>
+                </ul>
+            </section>
+        </aside>
+    </div><!-- div.content-wrapper -->
+</div>
+
+
+
+<footer class="bottom-footer">
+    <ul class="line">
+        <li>Copyright &copy; 2012-2015</li>
+        <li><a href="">联系我</a></li>
+    </ul>
+</footer>
+</body>
+</html>
