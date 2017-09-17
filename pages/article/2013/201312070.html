@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lily's lily - 我的文章</title>
+    <meta name="keywords" content="个人主页,个人网站,前端,设计,电影,生活" />
+    <meta name="description" content="Lily_Vain的个人主页，用于展示、记录、收集学习和生活中的美好的点滴。" />
+    <meta name="author" content="Lily_Vain，狐二十三" />
+    <link rel="Shortcut Icon" href="../../../liv.ico" />
+    <link href="../../../static/style/article.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+<body>
+
+
+
+
+<footer class="top-fixed">
+    <div class="top-content clearfix">
+        <div class="top-logo">
+            <a href="../../../" class="logo-pic">Lily's Lily</a>
+
+        </div>
+        <nav class="top-links">
+            <ul class="line">
+                <li><a href="../">文章</a></li>
+                <li><a href="../../works/">作品</a></li>
+                <li><a href="../../link">网址收集</a></li>
+                <li><a href="../../message">留言</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+<div class="main-container">
+    <div class="content-wrapper clearfix">
+        <div class="articles-header">
+            <hgroup>
+                <h1>Lily's Lily</h1>
+                <!-- <h2>——我的文章</h2> -->
+            </hgroup>
+
+        </div>
+
+        <div class="list-wrapper">
+            <article class="a-complete">
+                <time datetime="2013-12-07">
+                    <span class="time-date">12.05</span><br/>
+                    <span>Dec.</span><br/>
+                    <span>2014</span>
+                </time>
+                <div class="a-detail">
+                    <div class="a-label">Tag: &nbsp;<span>Web</span></div>
+                    <h1 class="a-title">Element Dimensions</h1>
+                    <div class="a-text">
+                        <p>这篇文章主要是对 javascript 中的元素的大小距离属性（element dimensions）进行一个总结。大部分内容都是出自《Javascript高级程序设计》一书，自己做的demo可能还比较简陋，随意看看就好。</p>
+                        <section>
+                            <h1>1. Offset Dimensions</h1>
+                            <p>元素的可见大小包括所有内边距、滚动条和边框大小（不包括外边距）。</p>
+                            <p>offsetParent 属性不一定与 parentNode 的值相等，是在DOM层次中距子元素最近的一个 position 值不是 static 的祖先元素。（provides dimensions?）</p>
+                            <img src="../../../static/images/article/element_dimensions_1.jpg" /><br />
+                            <a href="../demo/demo1.html" class="demo" target="_blank">Demo</a>
+                            <p>要想知道某个元素在页面上的偏移量，将这个元素的 offsetLeft 和 offsetTop 与其 offsetParent 的相同属性相加，循环至根元素，就可以得到一个基本准确的值。</p>
+<code>
+function getElementLeft(element){
+    var actualLeft = element.offsetLeft;
+    var current = element.offsetParent;
+    while (current !== null){
+        actualLeft += current.offsetLeft;
+        current = current.offsetParent;
+    }
+    return actualLeft;
+}
+
+function getElementTop(element){
+    var actualTop = element.offsetTop;
+    var current = element.offsetParent;
+    while (current !== null){
+        actualTop += current.offsetTop;
+        current = current.offsetParent;
+    }
+    return actualTop;
+}
+</code>
+                        </section>
+                        <section>
+                            <h1>2. Client Dimensions</h1>
+                            <img src="../../../static/images/article/element_dimensions_2.jpg" />
+                            <p>客户区大小就是元素内部的空间大小，滚动条</p>
+                            </section>
+                    </div><!--div.a-text -->
+
+
+                </div>
+            </article>
+
+            <!-- 显示文章评论 -->
+            <section class="a-comment">
+                <h1 class="comment-title">最新评论.</h1>
+                <p>该文章目前没有任何评论！</p>
+
+                <!-- 实现发表评论界面 -->
+                <form action="ArtReview" method="post" class="comm-form">
+                    <fieldset>
+                        <legend>发表评论</legend>
+                        <input name="action" value="review" type="hidden">
+                        <input name="rootId" value="10" type="hidden">
+                        <label for="revname">Name:</label>
+                        <input id="revname" name="revName" type="text" placeholder="昵称请不要多于10个字">
+                        <textarea name="artRContent" class="artRContent"></textarea>
+                        <input value="发表评论" type="submit" class="comm-submit">
+                    </fieldset>
+                </form>
+            </section>
+        </div><!-- div.list-wrapper -->
+
+
+        <aside>
+            <section>
+                <h1><span>导航</span></h1>
+                <ul>
+                    <li class="cata-single"><a href="../../../">首页</a></li>
+                    <li class="cata-single"><a href="../">文章</a></li>
+                    <li class="cata-single"><a href="../../works/">作品</a></li>
+                    <li class="cata-single"><a href="../../link">链接</a></li>
+                    <li class="cata-single"><a href="../../message">留言</a></li>
+                </ul>
+            </section>
+            <section>
+                <h1><span>分类</span></h1>
+                <ul>
+                    <li class="cata-single"><a href="">前端</a></li>
+                    <li class="cata-single"><a href="">绘画</a></li>
+                    <li class="cata-single"><a href="">数据库</a></li>
+                    <li class="cata-single"><a href="">读书笔记</a></li>
+                </ul>
+            </section>
+        </aside>
+    </div><!-- div.content-wrapper -->
+</div>
+
+
+
+<footer class="bottom-footer">
+    <ul class="line">
+        <li>Copyright &copy; 2012-2015</li>
+        <li><a href="">联系我</a></li>
+    </ul>
+</footer>
+</body>
+</html>

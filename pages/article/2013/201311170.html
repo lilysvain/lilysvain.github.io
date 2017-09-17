@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lily's lily - 我的文章</title>
+    <meta name="keywords" content="个人主页,个人网站,前端,设计,电影,生活" />
+    <meta name="description" content="Lily_Vain的个人主页，用于展示、记录、收集学习和生活中的美好的点滴。" />
+    <meta name="author" content="Lily_Vain，狐二十三" />
+    <link rel="Shortcut Icon" href="../../../liv.ico" />
+    <link href="../../../static/style/article.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+<body>
+
+
+
+
+<footer class="top-fixed">
+    <div class="top-content clearfix">
+        <div class="top-logo">
+            <a href="../../../" class="logo-pic">Lily's Lily</a>
+
+        </div>
+        <nav class="top-links">
+            <ul class="line">
+                <li><a href="../">文章</a></li>
+                <li><a href="../../works/">作品</a></li>
+                <li><a href="../../link">网址收集</a></li>
+                <li><a href="../../message">留言</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+<div class="main-container">
+    <div class="content-wrapper clearfix">
+        <div class="articles-header">
+            <hgroup>
+                <h1>Lily's Lily</h1>
+                <!-- <h2>——我的文章</h2> -->
+            </hgroup>
+
+        </div>
+
+        <div class="list-wrapper">
+            <article class="a-complete">
+                <time datetime="2013-11-17">
+                    <span class="time-date">12.05</span><br/>
+                    <span>Dec.</span><br/>
+                    <span>2014</span>
+                </time>
+                <div class="a-detail">
+                    <div class="a-label">Tag: &nbsp;<span>Web</span></div>
+                    <h1 class="a-title">HTML中CSS及JavaScript的引入</h1>
+                    <div class="a-text">
+                        <p>关于在页面中引入 CSS 和 Javascript 文件时需要注意的一些问题，在此进行一个简要的总结。其中有部分内容还是我目前没有弄得很懂的，比如候选样式表和 script 元素中几个不是很常用的属性。</p>
+                        <section>
+                            <h1>1. 结合HTML与CSS的几种方法</h1>
+                            <p>样式表通常都是放在 head 元素中。</p>
+                            <section>
+                                <h1>1.1. link 标记</h1>
+                                <p>link 标记的基本目的是允许 HTML 创作人员将包含link标记的文档与其他文档相关联。要成功地加载一个外部样式表，link 必须放在 head 元素中。</p>
+                                <code>&lt;link rel="stylesheet" type="text/css" href="sheet1.css" media="all" /&gt;</code>
+                                <p>rel 代表“关系”，type 总是设置为 text/css，这个值描述了使用 link 标记加载的数据的类型。这将确定浏览器如何处理其导入的数据。毕竟，将来可能会使用其他的样式语言，所以声明使用何种语言很重要。</p>
+                                <p>media="all" 声明这个样式表要应用于所有表现媒体。CSS2 还为这个属性定义了很多可取值：</p>
+                                <ul>
+                                    <li>aural：用于语音合成器、屏幕阅读器和文档的其他声音表现</li>
+                                    <li>braille：用 Braille 设备表现文档时使用</li>
+                                    <li>embossed：用Braille 打印设备打印时使用</li>
+                                    <li>handheld：用于手持设备，如个人数字助理或支持 Web 的蜂窝电话</li>
+                                    <li>print：为视力正常的用户打印文档时使用，另外还会在显示文档的“打印预览”时使用。</li>
+                                    <li>projection：用于投影媒体，如发表演讲时显示幻灯片的数字投影仪</li>
+                                    <li>screen：在屏幕媒体中表现文档时使用。</li>
+                                    <li>tty：在固定间距环境（如电传打字机）中显示文档时使用</li>
+                                    <li>tv：在电视上显示文档时使用</li>
+                                </ul>
+                                <p>以上大部分媒体类型在当前的Web浏览器中并不支持，其中3个得到最广泛支持的类型是 all、screen 和 print。Opera 还支持 projection，允许文档作为幻灯片显示。</p>
+                                <p>可以在多个媒体中使用一个样式表，各媒体用逗号分隔。</p>
+                                <p>文档最初显示时只会使用 rel 为 stylesheet 的 link 标记。如果关联多个样式表，都要设置 rel，浏览器会加载它们，合并它们的规则，并将其全部应用于文档。</p>
+                            </section>
+                            <section>
+                                <h1>2. 候选样式表</h1>
+                                <p>将 rel 属性的值置为 alternate stylesheet。只有在用户选择这个样式表时才会用于文档表现。</p>
+                                <p>如果浏览器能使用候选样式表，它会使用 link 元素的 title 属性值生成一个候选样式列表。</p>
+                                <p>如果没有为样式指定 title，那么它将作为一个永久样式表，始终用于文档的显示。</p>
+                            </section>
+                            <section>
+                                <h1>3. style 元素</h1>
+                                <p>一定要使用 type 属性。也可以为 style 元素指定一个 media 属性。开始和结束 style 标记之间的样式称为文档样式表（document style sheet），或嵌套样式表（embedded style sheet）。其中还可以使用 @import 指令包含多个外部样式表链接。</p>
+                                <code>&lt;style type="text/css"&gt; &lt;/style&gt;</code>
+                            </section>
+                            <section>
+                                <h1>4. @import 指令</h1>
+                                <p>许多较老的浏览器无法处理不同形式的 @import 指令。可以适当利用这一点，对这些浏览器“隐藏”样式。</p>
+                                <code>@import url(sheet.css);</code>
+                                <p>与 link 一样，可以限制所导入的样式表应用于一种或多种媒体：@import url(sheet.css) all;</p>
+                                <p>如果有一个外部样式表，它需要使用其他外部样式表中的样式，此时 @import 就非常有用。（外部样式表中不能包含任何文档标记，所以不能使用 link 元素）</p>
+                                <p>CSS 要求 @import 指令出现在样式表中的其他规则之前。如果一个 @import 出现在其他规则之后，兼容用户代理会将其忽略。（IE 不会忽略任何 @import 指令）</p>
+                                <p>link属于XHTML标签，而@import完全是CSS提供的一种方式。当一个页面被加载的时候，link引用的CSS会同时被加载，而@import引用的CSS 会等到页面全部被下载完再被加载。所以有时候浏览@import加载CSS的页面时开始会没有样式（就是闪烁）。</p>
+                            </section>
+                        </section>
+                        <section>
+                            <h1>HTML 中 JavaScript的引入</h1>
+                            <section>
+                                <h1>1. &lt;script&gt; 元素</h1>
+                                <p>&lt;script&gt;定义了下列6个属性:</p>
+                                <ul>
+                                    <li>async — 可选。表示应该立即下载脚本，但不妨碍页面中的其他操作，如下载其他资源或等待加载其他脚本。只对外部脚本文件有效。</li>
+                                    <li>defer — 可选。表示脚本可以延迟到文档完全被解析和显示之后再执行，相当于告诉浏览器立即下载，但延迟执行。只对外部脚本文件有效。</li>
+                                    <li>charset — 可选。大多数浏览器会忽略它的值，很少有人使用。</li>
+                                    <li>language — 已废弃。</li>
+                                    <li>src — 可选。表示包含的外部文件。</li>
+                                    <li>type — 可选的。表示编写代码使用的脚本语言的内容类型（也称为 MIME 类型）。考虑到约定俗成和最大限度的浏览器兼容性，一般使用的还是 "text/javascript" 。这个属性不是必须的，其默认值就是 "text/javascript"。</li>
+                                </ul>
+                                <p>只要不存在 defer 和 async 属性，浏览器都会按照 &lt;script&gt; 元素在页面中出现的先后顺序对它们依次进行解析。</p>
+                                <p>与解析嵌入式 JavaScript 代码一样，在解析外部 Javascript 文件（包括下载该文件）时，页面的处理会暂时停止。</p>
+                            </section>
+                            <section>
+                                <h1>2. &lt;script&gt; 标签的位置 </h1>
+                                <p>按照惯例，所有 &lt;script&gt; 元素都应该放在页面的 &lt;head&gt; 元素中。这种做法的目的就是把所有外部文件（包括 CSS 文件和 JavaScript 文件）的引用都放在相同的地方。但这意味着，必须等到全部 JavaScript 代码都被下载、解析和执行完成以后，才能开始呈现页面的内容。这容易导致浏览器在呈现页面时出现延迟（延迟期间的浏览器窗口中是一片空白。为避免这个问题，现代 Web 应用程序一般都会把全部 JavaScript 引用放在 &lt;body&gt;元素中页面的内容后面。</p>
+<code>
+&lt;--这里放内容--&gt;
+&lt;script type="text/javascript" src="example1.js"&gt;&lt;/script&gt;
+</code>
+                            </section>
+                            <section>
+                                <h1>3. 延迟脚本</h1>
+                                <p>定义了 defer 属性后，虽然把&lt;script>元素放在文档的 &lt;head&gt; 元素中，但其中包含的脚本将延迟到浏览器遇到&lt;/html&gt;标签后再执行。HTML5 规范要求脚本按它们出现的先后顺序执行，而且先 DOMContentLoaded 事件执行。但现实当中，延迟脚本并不一定会按照顺序执行，也不一定会在 DOMContentLoaded 事件触发前执行，因此最好只包含一个延迟脚本。</p>
+                                <p>在 XHTML 文档中，要把 defer 属性设置为 defer="defer"。</p>
+                            </section>
+                            <section>
+                                <h1>4. 异步脚本 </h1>
+                                <p>标记为 async 的脚本并不保证按照指定它们的先后顺序执行，确保它们之间互不依赖非常重要。建议异步脚本不要在加载期间修改 DOM。</p>
+                                <p>异步脚本一定会在页面的 load 事件前执行，但可能会在 DOMContentLoaded 事件触发之前或之后执行。</p>
+                            </section>
+                            <section>
+                                <h1>5. 嵌入代码与外部文件</h1>
+                                <p>一般认为最好的做法还是尽可能使用外部文件来包含 JavaScript 代码。可维护性好，且浏览器能够根据具体的设置缓存链接的所有外部 JavaScript 文件，也就是说，如果有两个页面都使用同一个文件，那么这个文件只需下载一次，能够加快页面加载的速度。</p>
+                            </section>
+                        </section>
+
+                    </div><!--div.a-text -->
+
+
+                </div>
+            </article>
+
+            <!-- 显示文章评论 -->
+            <section class="a-comment">
+                <h1 class="comment-title">最新评论.</h1>
+                <p>该文章目前没有任何评论！</p>
+
+                <!-- 实现发表评论界面 -->
+                <form action="ArtReview" method="post" class="comm-form">
+                    <fieldset>
+                        <legend>发表评论</legend>
+                        <input name="action" value="review" type="hidden">
+                        <input name="rootId" value="9" type="hidden">
+                        <label for="revname">Name:</label>
+                        <input id="revname" name="revName" type="text" placeholder="昵称请不要多于10个字">
+                        <textarea name="artRContent" class="artRContent"></textarea>
+                        <input value="发表评论" type="submit" class="comm-submit">
+                    </fieldset>
+                </form>
+            </section>
+        </div><!-- div.list-wrapper -->
+
+
+        <aside>
+            <section>
+                <h1><span>导航</span></h1>
+                <ul>
+                    <li class="cata-single"><a href="../../../">首页</a></li>
+                    <li class="cata-single"><a href="../">文章</a></li>
+                    <li class="cata-single"><a href="../../works/">作品</a></li>
+                    <li class="cata-single"><a href="../../link">链接</a></li>
+                    <li class="cata-single"><a href="../../message">留言</a></li>
+                </ul>
+            </section>
+            <section>
+                <h1><span>分类</span></h1>
+                <ul>
+                    <li class="cata-single"><a href="">前端</a></li>
+                    <li class="cata-single"><a href="">绘画</a></li>
+                    <li class="cata-single"><a href="">数据库</a></li>
+                    <li class="cata-single"><a href="">读书笔记</a></li>
+                </ul>
+            </section>
+        </aside>
+    </div><!-- div.content-wrapper -->
+</div>
+
+
+
+<footer class="bottom-footer">
+    <ul class="line">
+        <li>Copyright &copy; 2012-2015</li>
+        <li>鄂ICP备12010152号-1</li>
+        <li><a href="">联系我</a></li>
+    </ul>
+</footer>
+</body>
+</html>

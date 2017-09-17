@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lily's lily - 我的文章</title>
+    <meta name="keywords" content="个人主页,个人网站,前端,设计,电影,生活" />
+    <meta name="description" content="Lily_Vain的个人主页，用于展示、记录、收集学习和生活中的美好的点滴。" />
+    <meta name="author" content="Lily_Vain，狐二十三" />
+    <link rel="Shortcut Icon" href="../../../liv.ico" />
+    <link href="../../../static/style/article.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+<body>
+
+
+
+
+<footer class="top-fixed">
+    <div class="top-content clearfix">
+        <div class="top-logo">
+            <a href="../../../" class="logo-pic">Lily's Lily</a>
+
+        </div>
+        <nav class="top-links">
+            <ul class="line">
+                <li><a href="../">文章</a></li>
+                <li><a href="../../works/">作品</a></li>
+                <li><a href="../../link">网址收集</a></li>
+                <li><a href="../../message">留言</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+<div class="main-container">
+    <div class="content-wrapper clearfix">
+        <div class="articles-header">
+            <hgroup>
+                <h1>Lily's Lily</h1>
+                <!-- <h2>——我的文章</h2> -->
+            </hgroup>
+
+        </div>
+
+        <div class="list-wrapper">
+            <article class="a-complete">
+                <time datetime="2015-03-13">
+                    <span class="time-date">12.05</span><br/>
+                    <span>Dec.</span><br/>
+                    <span>2014</span>
+                </time>
+                <div class="a-detail">
+                    <div class="a-label">Tag: &nbsp;<span>Web</span></div>
+                    <h1 class="a-title">JavaScript 中的面向对象程序设计</h1>
+                    <div class="a-text">
+                        <section>
+                            <h1>1. 理解对象</h1>
+                            <p>ECMA-262 把对象定义为：“无序属性的集合，其属性可以包含基本值、对象或者函数。”对象的每个属性或方法都有一个名字，而每个名字都映射到一个值。</p>
+                            <p>可以通过创建一个 Object 实例，然后为它添加属性和方法来创建自定义对象；也可以通过对象字面量直接创建。后者现在几乎已成为首选模式：</p>
+<code>var person = {
+    name: "Nicholas",
+    age: 29,
+    job: "Software Engineer",
+    sayName: function(){
+    alert(this.name);
+    }
+};
+                            </code>
+                            <p>对象的属性在创建时都带有一些特征值（characteristic），Js 通过这些特征值来定义它们的行为。</p>
+                            <section>
+                                <h1>1.1 属性类型</h1>
+                                <p>属性（property）的特性（attribute）描述了属性的各种特征，ECMA-262 定义这些特性是为了实现 JavaScript 引擎用的，因为在 JavaScript 中不能直接访问它们。ECMA-262 第5版规范将它们放在两对方括号中表示特性是内部值。</p>
+                                <p>ECMAScript 中有两种属性：数据属性和访问器属性。</p>
+                                <section>
+                                    <h1>1.1.1 数据属性</h1>
+                                    <p>数据属性也就是我们最常见的那种属性，它们有4个描述其行为的特性：
+                                    <ul>
+                                        <li>[[Configurable]]: 表示能否修改属性的特性</li>
+                                        <li>[[Enumerable]]: 表示能否通过 for-in 循环返回属性</li>
+                                        <li>[[Writable]]: 表示能否修改属性的值</li>
+                                        <li>[[Value]]: 包含这个属性的数据值</li>
+                                    </ul></p>
+                                    <p>要修改属性默认的特性，必须使用 ECMAScript 5 的 Object.defineProperty()方法，例如：</p>
+<code>var person = {};
+Object.defineProperty(person, "name", {
+    writable: false,
+    value: "Nicholas"
+});
+person.name = "Greg";
+alert(person.name);  //"Nicholas"
+                                    </code>
+                                    <p>在多数情况下，都没有必要利用这些高级功能，只是理解这些概念对理解 JavaScript 对象非常有用。</p>
+                                </section>
+                                <section>
+                                    <h1>1.1.2 访问器属性</h1>
+                                    <p>访问器属性不包含数据值，它们包含一对 getter 和 setter 函数（都不是必需），访问器属性也有4个特性：
+                                    <ul>
+                                        <li>[[Configurable]]</li>
+                                        <li>[[Enumerable]]</li>
+                                        <li>[[Get]]: 在读取属性时调用的函数</li>
+                                        <li>[[Set]]: 在写入属性时调用的函数</li>
+                                    </ul></p>
+                                    <p>访问器属性必须使用 Object.defineProperty() 来定义。</p>
+<code>
+    var book = {
+        _year: 2004,
+        edition: 1
+    };
+    Object.defineProperty(book, "year", {
+        get: function(){
+        return this._year;
+    },
+    set: function(newValue){
+        if (newValue > 2004) {
+            this._year = newValue;
+            this.edition += newValue - 2004;
+        }
+    }
+    });
+    book.year = 2005;
+    alert(book.edition); //2
+                                    </code>
+                                    <p>_year 前面的下划线是一种常用的记号，用于表示只能通过对象方法访问的属性。设置一个属性的值会导致其他属性发生变化，这是使用访问器属性的常见方式。没有指定 getter 函数的属性是不能读的，没有指定 setter 函数的属性是不能写的。</p>
+                                    <p>支持 ECMAScript 5 的 Object.defineProperty() 方法的浏览器有 IE9+、Firefox 4+、Safari 5+、Opera 12+ 和 Chrome。关于对象属性特性的介绍就只讲到这里的。</p>
+                                </section>
+                            </section>
+                        </section>
+                        <section>
+                            <h1>2. 创建对象</h1>
+                            <p>虽然 Object 构造函数或对象字面量都可以用来创建单个对象，但使用同一接口创建很多对象时会产生大量的重复代码。为了解决这个问题，就有了下面一系列对象创建模式：</p>
+                            <section>
+                                <h1>2.1 工厂模式</h1>
+                                <p>考虑到在 ECMAScript 中无法创建类，开发人员就发明了一种函数，用函数来封装以特定接口创建对象的细节，例如：</p>
+<code>
+    function createPerson(name, age, job){
+        var o = new Object();
+        o.name = name;
+        o.age = age;
+        o.job = job;
+        o.sayName = function(){
+            alert(this.name);
+        };
+        return o;
+    }
+    var person1 = createPerson("Nicholas", 29, "Software Engineer");
+                                </code>
+                                <p>工厂模式虽然解决了创建多个相似对象的问题，却没有解决对象识别的问题（即知道一个对象的类型）。</p>
+                            </section>
+                            <section>
+                                <h1>2.2 构造函数模式</h1>
+                                <p>可以创建自定义的构造函数，将前面的例子重写如下：</p>
+<code>function Person(name, age, job){
+    this.name = name;
+    this.age = age;
+    this.job = job;
+    this.sayName = function(){
+    alert(this.name);
+    };
+}
+var person1 = new Person("Nicholas", 29, "Software Engineer");
+var person2 = new Person("Greg", 27, "Doctor");
+                                </code>
+                                <p>按照惯例，构造函数始终都应该以一个大写字母开头，而非构造函数则应该以一个小写字母开头。Person() 构造函数与 createPerson() 还存在以下不同：
+                                <ul>
+                                    <li>没有显式地创建对象；</li>
+                                    <li>直接将属性和方法赋给了 this 对象</li>
+                                    <li>没有 return 语句</li>
+                                </ul></p>
+                                <p>因此不难想到，使用 new 操作符调用构造函数实际上会经历以下 4 个步骤：创建一个新对象、构造函数的作用域赋给新对象（this 就指向了这个新对象）、执行构造函数中的代码、返回新对象。事实上，如果不通过 new 操作符来调用，构造函数跟普通函数也不会有什么两样，this 会指向 Global 对象。</p>
+                                <p>前面的例子中，person1 和 person2 分别保存着 Person 的一个不同实例。这两个对象都有一个 constructor（构造函数）属性，该属性指向 Person：</p>
+                                <code>alert(person1.constructor == Person); //true</code>
+                                <p>构造函数的主要问题，就是每个方法都要在每个实例上重新创建一边。前面的例子中，person1 和 person2 都有一个名为 sayName() 的方法，但那两个方法不是同一个 Function 的实例。以下代码可以证明这一点：</p>
+                                <code>alert(person1.constructor == Person); //true</code>
+                            </section>
+                            <section>
+                                <h1>2.3 原型模式</h1>
+                                <p>使用原型模式，可以让一些属性和方法由所有实例共享：</p>
+<code>
+    function Person(){
+    }
+    Person.prototype.name = "Nicholas";
+    Person.prototype.age = 29;
+    Person.prototype.job = "Software Engineer";
+    Person.prototype.sayName = function(){
+        alert(this.name);
+    };
+    var person1 = new Person();
+    var person2 = new Person();
+    alert(person1.sayName == person2.sayName); //true</code>
+                                <p>我们创建的每个函数都有一个 prototype 属性，这个属性是一个指针，指向函数的原型对象，而这个对象的用途是包含可以由特定类型的所有实例共享的属性和方法。所有原型对象都会自动获得一个 constructor（构造函数）属性，这个属性包含一个指向 prototype 属性所在函数的指针。拿前面例子来说，Person.prototype.constructor 指向 Person。</p>
+                                <p>当调用构造函数创建一个新实例后，该实例的内部都将包含一个指针 [[Prototype]]（内部属性），指向构造函数的原型对象。如图：</p>
+                                <img src="../../static/images/article/031320151246370.png " />
+                            </section>
+                        </section>
+
+                        <section>
+                            <h1></h1>
+                            <p></p>
+                        </section>
+
+                    </div><!--div.a-text -->
+
+
+                </div>
+            </article>
+
+            <!-- 显示文章评论 -->
+            <section class="a-comment">
+                <h1 class="comment-title">最新评论.</h1>
+                <p>该文章目前没有任何评论！</p>
+
+                <!-- 实现发表评论界面 -->
+                <form action="ArtReview" method="post" class="comm-form">
+                    <fieldset>
+                        <legend>发表评论</legend>
+                        <input name="action" value="review" type="hidden">
+                        <input name="rootId" value="16" type="hidden">
+                        <label for="revname">Name:</label>
+                        <input id="revname" name="revName" type="text" placeholder="昵称请不要多于10个字">
+                        <textarea name="artRContent" class="artRContent"></textarea>
+                        <input value="发表评论" type="submit" class="comm-submit">
+                    </fieldset>
+                </form>
+            </section>
+        </div><!-- div.list-wrapper -->
+
+
+        <aside>
+            <section>
+                <h1><span>导航</span></h1>
+                <ul>
+                    <li class="cata-single"><a href="../../../">首页</a></li>
+                    <li class="cata-single"><a href="../">文章</a></li>
+                    <li class="cata-single"><a href="../../works/">作品</a></li>
+                    <li class="cata-single"><a href="../../link">链接</a></li>
+                    <li class="cata-single"><a href="../../message">留言</a></li>
+                </ul>
+            </section>
+            <section>
+                <h1><span>分类</span></h1>
+                <ul>
+                    <li class="cata-single"><a href="">前端</a></li>
+                    <li class="cata-single"><a href="">绘画</a></li>
+                    <li class="cata-single"><a href="">数据库</a></li>
+                    <li class="cata-single"><a href="">读书笔记</a></li>
+                </ul>
+            </section>
+        </aside>
+    </div><!-- div.content-wrapper -->
+</div>
+
+
+
+<footer class="bottom-footer">
+    <ul class="line">
+        <li>Copyright &copy; 2012-2015</li>
+        <li>鄂ICP备12010152号-1</li>
+        <li><a href="">联系我</a></li>
+    </ul>
+</footer>
+</body>
+</html>
