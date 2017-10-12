@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lily's lily - 我的文章</title>
+    <meta name="keywords" content="个人主页,个人网站,前端,设计,电影,生活" />
+    <meta name="description" content="Lily_Vain的个人主页，用于展示、记录、收集学习和生活中的美好的点滴。" />
+    <meta name="author" content="Lily_Vain，狐二十三" />
+    <link rel="Shortcut Icon" href="../../../liv.ico" />
+    <link href="../../../static/style/article.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+<body>
+
+
+
+
+<footer class="top-fixed">
+    <div class="top-content clearfix">
+        <div class="top-logo">
+            <a href="../../../" class="logo-pic">Lily's Lily</a>
+
+        </div>
+        <nav class="top-links">
+            <ul class="line">
+                <li><a href="../">文章</a></li>
+                <li><a href="../../works/">作品</a></li>
+                <li><a href="../../link">网址收集</a></li>
+                <li><a href="../../message">留言</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+<div class="main-container">
+    <div class="content-wrapper clearfix">
+        <div class="articles-header">
+            <hgroup>
+                <h1>Lily's Lily</h1>
+                <!-- <h2>——我的文章</h2> -->
+            </hgroup>
+
+        </div>
+
+        <div class="list-wrapper">
+            <article class="a-complete">
+                <time datetime="2017-09-27">
+                    <span class="time-date">12.05</span><br/>
+                    <span>Dec.</span><br/>
+                    <span>2014</span>
+                </time>
+                <div class="a-detail">
+                    <div class="a-label">Tag: &nbsp;<span></span></div>
+                    <h1 class="a-title">Java Collections</h1>
+                    <div class="a-text">
+                        <p>Java集合类里面最基本的接口：Collection、Set、List 和 Map。Collection 代表一组对象，每一个对象都是它的子元素；Set 是不包含重复元素的Collection；List 是有顺序的collection，并且可以包含重复元素；Map 是可以把键(key)映射到值(value)的对象，键不能重复。</p>
+                        <section>
+                            <h1>1. Stack</h1>
+                            <p>Stack class extends the Vector class</p>
+                        </section>
+                        <section>
+                            <h1></h1>
+                            <p></p>
+                        </section>
+                    </div><!--div.a-text -->
+
+
+                </div>
+            </article>
+
+            <!-- 显示文章评论 -->
+            <section class="a-comment">
+                <h1 class="comment-title">最新评论.</h1>
+                <p>该文章目前没有任何评论！</p>
+
+                <!-- 实现发表评论界面 -->
+                <form action="ArtReview" method="post" class="comm-form">
+                    <fieldset>
+                        <legend>发表评论</legend>
+                        <input name="action" value="review" type="hidden">
+                        <input name="rootId" value="32" type="hidden">
+                        <label for="revname">Name:</label>
+                        <input id="revname" name="revName" type="text" placeholder="昵称请不要多于10个字">
+                        <textarea name="artRContent" class="artRContent"></textarea>
+                        <input value="发表评论" type="submit" class="comm-submit">
+                    </fieldset>
+                </form>
+            </section>
+        </div><!-- div.list-wrapper -->
+
+
+        <aside>
+            <section>
+                <h1><span>导航</span></h1>
+                <ul>
+                    <li class="cata-single"><a href="../../../">首页</a></li>
+                    <li class="cata-single"><a href="../">文章</a></li>
+                    <li class="cata-single"><a href="../../works/">作品</a></li>
+                    <li class="cata-single"><a href="../../link">链接</a></li>
+                    <li class="cata-single"><a href="../../message">留言</a></li>
+                </ul>
+            </section>
+            <section>
+                <h1><span>分类</span></h1>
+                <ul>
+                    <li class="cata-single"><a href="">前端</a></li>
+                    <li class="cata-single"><a href="">绘画</a></li>
+                    <li class="cata-single"><a href="">数据库</a></li>
+                    <li class="cata-single"><a href="">读书笔记</a></li>
+                </ul>
+            </section>
+        </aside>
+    </div><!-- div.content-wrapper -->
+</div>
+
+
+
+<footer class="bottom-footer">
+    <ul class="line">
+        <li>Copyright &copy; 2012-2015</li>
+        <li>鄂ICP备12010152号-1</li>
+        <li><a href="">联系我</a></li>
+    </ul>
+</footer>
+</body>
+</html>

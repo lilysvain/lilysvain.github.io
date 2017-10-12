@@ -62,11 +62,58 @@
                             <h1>1. 整数类型</h1>
                             <p>Java 提供四种整数类型：int --- 4 bytes --- –2,147,483,648 to 2,147,483, 647 (just over 2 billion)；short --- 2 bytes --- –32,768 to 32,767；long --- 8 bytes --- –9,223,372,036,854,775,808 to 9,223,372,036,854,775,807；byte --- 1 byte --- –128 to 127。
                             </p>
+                            <p>Long integer numbers have a suffix L (for example, 4000000000L). Hexadecimal numbers have a prefix 0x (for example, 0xCAFE). Octal numbers have a prefix 0. For example, 010 is 8.</p>
                             <p>注意 Java 没有任何无符号类型。</p>
                         </section>
 
                         <section>
-                            <h1>2. 随机数生成</h1>
+                            <h1>2. 字符串 String</h1>
+                            <p>Java 允许使用 “+” 符号来 concatenate 两个字符串。Strings Are Immutable。不要使用 “==” 运算符测试两个字符串是否相等，它只能判断两个字符串是否存在同一个location下。</p>
+                            <p>java.lang.String <a href="http://docs.oracle.com/javase/8/docs/api/" target="_blank">API</a></p>
+                            <p>String Methods</p>
+                            <ul>
+                                <li>char charAt(int index) --- Returns the code unit at the specified location. You probably don't want to call this method unless you are interested in low-level code units.</li>
+                                <li>boolean equals(Object other) --- Returns true if the string equals other.</li>
+                                <li>boolean equalsIgnoreCase(String other) --- returns true if the string equals other, except for upper/lowercase distinction.</li>
+                                <li>int indexOf(String str)</li>
+                                <li>int indexOf(String str, int fromIndex) --- Returns the start of the first substring equal to the string str, starting at index 0 or at fromIndex, or –1 if str does not occur in this string.</li>
+                                <li>int length() --- Returns the length of the string.</li>
+                                <li>String substring(int beginIndex)</li>
+                                <li>String substring(int beginIndex, int endIndex) --- Returns a new string consisting of all code units from beginIndex until the end of the string or until endIndex - 1.</li>
+                                <li>String toLowerCase() --- Returns a new string containing all characters in the original string, with uppercase characters converted to lowercase.</li>
+                                <li>String trim() --- Returns a new string by eliminating all leading and trailing spaces in the original string.</li>
+                                <li>char[] toCharArray() --- Converts this string to a new character array.</li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h1>3. Object Wrappers and Autoboxing</h1>
+                            <p>可以用于String和int之间的转换，例如：</p>
+                            <code>int x = Integer.parseInt(s);
+                            </code>
+                            <p>API: java.lang.Integer</>
+                            <p>Methods:</p>
+                            <ul>
+                                <li>static String toString(int i) --- returns a new String object representing the number i in base 10.</li>
+                                <li>static int parseInt(String s)</li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h1>4. 数组和 Arrays</h1>
+                            <p>可以使用 Arrays 类中的静态方法来对数组进行复制、填充和排序。例如，将一个数组中的所有值都复制到新数组中，第二个参数为新数组长度。：</p>
+                            <code>int[] copiedLuckyNumbers = Arrays.copyOf(luckyNumbers, luckyNumbers.length);</code>
+                            <p><a href="http://docs.oracle.com/javase/8/docs/api/" target="_blank">API: </a>java.util.Arrays</p>
+                            <p>All Methods：</p>
+                            <ul>
+                                <li>static type copyOf(type[] a, int length)</li>
+                                <li>static void sort(type[] a)</li>
+                                <li>static void fill(type[] a, type v) ——sets all elements of the array to v.</li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h1>5. 随机数生成</h1>
                             <p>一般计算机的随机数都是伪随机数，以一个真随机数（种子）作为初始条件，然后用一定的算法不停迭代产生随机数。一般种子可以选择为当前的系统时间，这是完全随机的。 </p>
                             <p>java.util.Random 类用于生成一系列伪随机数。它使用一个48位的种子，which is modified using a linear congruential formula（线性同余）. <a href="http://docs.oracle.com/javase/8/docs/api/" target="_blank">API</a></p>
                             <p>Random Constructors</p>
@@ -75,11 +122,6 @@
                             <ul>
                                 <li>public int nextInt(int bound) --- Returns a pseudorandom, uniformly distributed int value between 0 (inclusive) and the specified value (exclusive)</li>
                             </ul>
-                        </section>
-
-                        <section>
-                            <h1></h1>
-                            <p></p>
                         </section>
 
 
