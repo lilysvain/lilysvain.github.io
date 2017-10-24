@@ -10,10 +10,6 @@
     <link href="../../../static/style/article.css" rel="stylesheet" type="text/css" media="screen">
 </head>
 <body>
-
-
-
-
 <footer class="top-fixed">
     <div class="top-content clearfix">
         <div class="top-logo">
@@ -31,13 +27,6 @@
     </div>
 </footer>
 
-
-
-
-
-
-
-
 <div class="main-container">
     <div class="content-wrapper clearfix">
         <div class="articles-header">
@@ -50,73 +39,31 @@
 
         <div class="list-wrapper">
             <article class="a-complete">
-                <time datetime="2017-09-29">
+                <time datetime="2017-10-21">
                     <span class="time-date">12.05</span><br/>
                     <span>Dec.</span><br/>
                     <span>2014</span>
                 </time>
                 <div class="a-detail">
                     <div class="a-label">Tag: &nbsp;<span></span></div>
-                    <h1 class="a-title">Java 线程</h1>
+                    <h1 class="a-title">从MVC到SHH</h1>
                     <div class="a-text">
-                        <p>笔试面试中经常被问到多线程的问题，只看过相关章节和文章，自己思路还比较杂乱吧，一边整理一边更文，可能会比较慢。</p>
-                        <p>线程的概念以及和进程的区别应该不用多说，参见操作系统。</p>
+                        <p>看到一篇同名的博客，觉得讲的还不错，就自己总结并补充了一些内容，还是用了同样的文章标题。</p>
                         <section>
-                            <h1>1. 创建线程的几种方式</h1>
-                            <p>有4种方式可以用来创建线程：继承Thread类、实现Runnable接口、使用Executor框架来创建线程池、实现Callable接口。实现Runnable接口这种方式更受欢迎，因为这不需要继承Thread类。在应用设计中已经继承了别的对象的情况下，这需要多继承（而Java不支持多继承），只能实现接口。同时，线程池也是非常高效的，很容易实现和使用。</p>
-                            <section>
-                                    <h1>1.1 实现 Runnable 接口</h1>
-                                    <p>Runnable 接口很简单，其中只有一个 run() 方法。我们实现一个类，并实例化一个对象：</p>
-<code>
-    class MyRunnable implements Runnable {
-        public void run() {
-            task code
-        }
-    }
-    Runnable r = new MyRunnable();
-                                    </code>
-                                    <p>接下来创建一个 Thread 对象，并启动线程：</p>
-<code>
-    Thread t = new Thread(r);
-    t.start();
-                                    </code></p>
-                            </section>
-
-                            <section>
-                                <h1>1.2 继承Thread类</h1>
-                                <p>也可以直接实现一个 Thread 的子类：</p>
-<code>
-    class MyThread extends Thread {
-        public void run() {
-            task code
-        }
-    }
-                                </code>
-                                <p>然后就可以创建该子类的对象并使用 start() 方法。
-                                </p>
-                            </section>
-
+                            <h1>1. 一些基础概念</h1>
+                            <p>面向对象程序设计（Object Oriented Programming，OOP）是一种计算机编程架构。AOP 是 OOP 的延续，是 Aspect Oriented Programming 的缩写，意思是面向方面编程。 将通用需求功能从不相关类之中分离出来；同时，能够使得很多类共享一个行为，一旦行为发生变化，不必修改很多类，只要修改这个行为就可以。</p>
+                            <p>控制反转 IOC (Inversion of Control) ：控制指的就是程序相关类之间的依赖关系。传统观念设计中，通常由调用者来创建被调用者的实例,，在 Spring 里，创建被调用者的工作不再由调用者来完成，而是由 Spring 容器完成，依赖关系被反转了，称为控制反转，目的是为了获得更好的扩展性和良好的可维护性。创建被调用者的工作由 Spring 容器完成，然后注入调用者，因此也称依赖注入(Dependency injection)。控制反转和依赖注入是同一个概念。</p>
                         </section>
 
                         <section>
-                            <h1>2. 同步</h1>
+                            <h1></h1>
                             <p></p>
-
-                            <section>
-                                <h1>2.1 Volatile 域</h1>
-                                <p>仅仅为了读写一两个实例域就使用同步，显得开销过大，volatile 关键字为同步访问实例域提供了一个免锁机制。</p>
-                            </section>
-
                         </section>
-
-
-
-
-
                     </div><!--div.a-text -->
 
 
                 </div>
+
             </article>
 
             <!-- 显示文章评论 -->
@@ -169,7 +116,6 @@
 <footer class="bottom-footer">
     <ul class="line">
         <li>Copyright &copy; 2012-2015</li>
-        <li>鄂ICP备12010152号-1</li>
         <li><a href="">联系我</a></li>
     </ul>
 </footer>

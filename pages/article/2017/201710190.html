@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lily's lily - 我的文章</title>
+    <meta name="keywords" content="个人主页,个人网站,前端,设计,电影,生活" />
+    <meta name="description" content="Lily_Vain的个人主页，用于展示、记录、收集学习和生活中的美好的点滴。" />
+    <meta name="author" content="Lily_Vain，狐二十三" />
+    <link rel="Shortcut Icon" href="../../../liv.ico" />
+    <link href="../../../static/style/article.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+<body>
+<footer class="top-fixed">
+    <div class="top-content clearfix">
+        <div class="top-logo">
+            <a href="../../../" class="logo-pic">Lily's Lily</a>
+
+        </div>
+        <nav class="top-links">
+            <ul class="line">
+                <li><a href="../">文章</a></li>
+                <li><a href="../../works/">作品</a></li>
+                <li><a href="../../link">网址收集</a></li>
+                <li><a href="../../message">留言</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
+<div class="main-container">
+    <div class="content-wrapper clearfix">
+        <div class="articles-header">
+            <hgroup>
+                <h1>Lily's Lily</h1>
+                <!-- <h2>——我的文章</h2> -->
+            </hgroup>
+
+        </div>
+
+        <div class="list-wrapper">
+            <article class="a-complete">
+                <time datetime="2017-10-19">
+                    <span class="time-date">12.05</span><br/>
+                    <span>Dec.</span><br/>
+                    <span>2014</span>
+                </time>
+                <div class="a-detail">
+                    <div class="a-label">Tag: &nbsp;<span></span></div>
+                    <h1 class="a-title">面向对象编程</h1>
+                    <div class="a-text">
+                        <section>
+                            <h1>1. 方法覆盖 (Overriding) 和方法重载 (Overloading) </h1>
+                            <p>这个问题貌似被问过两次还是三次了，还是有一些地方没有注意到，总结一下。</p>
+                            <p>Overriding 中：</p>
+                            <ol>
+                                <li>覆盖的方法的返回值必须和被覆盖的方法的返回一致。</li>
+                                <li>覆盖的方法所抛出的异常必须和被覆盖方法的所抛出的异常一致，或者是其子类；因为子类可以解决父类的一些问题，不能比父类有更多的问题。</li>
+                                <li>子类方法的访问权限只能比父类的更大，不能更小。如果父类的方法是 private 类型，则在其子类中只是新定义了一个方法，并没有对其进行覆盖。</li>
+                            </ol>
+                            <p>Overloading 中：</p>
+                            <ol>
+                                <li>只能通过不同的参数样式，不能通过访问权限、返回类型、抛出的异常进行重载；</li>
+                                <li>还有一些和overriding情况类似。</li>
+                            </ol>
+                        </section>
+
+                        <section>
+                            <h1>2. 接口和抽象类 </h1>
+                            <p>不同点（一些明显的区别不列出了，比如类可以实现很多个接口，但是只能继承一个抽象类）：</p>
+                            <ul>
+                                <li>接口中所有的方法隐含的都是抽象的。而抽象类则可以同时包含抽象和非抽象的方法。(JDK8似乎有改动?)</li>
+                                <li>Java 接口中声明的变量默认都是 final 的。抽象类可以包含非 final 的变量。</li>
+                                <li>Java 接口中的成员函数默认是 public 的。抽象类的成员函数可以是 private，protected 或者是 public 。</li>
+                                <li>抽象类可以在不提供接口方法实现的情况下实现接口。</li>
+                                <li>抽象类也不可以被实例化，但是，如果它包含 main 方法的话是可以被调用的。</li>
+                            </ul>
+                            <p>接口用于描述对外提供的所有服务，因此接口中的成员常量和方法都必须是公开(public)类型的，确保外部使用者能访问它们；接口不涉及和任何具体实例相关的细节，因此接口没有构造方法，不能被实例化，没有实例变量，只有静态（static）变量；接口的中的变量是所有实现类共有的，所以变量是不可变(final)类型，也就是常量了。接口的方法默认是 public abstract，接口的属性默认是 public static final 常量，且必须赋初值。
+                            </p>
+                        </section>
+
+                        <section>
+                            <h1>3. 构造函数</h1>
+                            <p>一个类中如果不写构造方法，那么编译器会帮我们加上一个默认的构造方法（没有参数）。如果一个类中有至少一个构造方法（有参数）但没有默认构造方法，使用无参数构造函数创建对象时将编译不通过。</p>
+                            <p>如果在子类构造方法中我们并没有显示的调用基类的构造方法，如：super(xxx)，这样就会调用父类的默认构造方法，如果基类中没有无参的构造方法，则编译出错。</p>
+                            <p>一个有关概念的小问题：构造器（constructor）是否可被重写（override）？构造器不能被继承，因此不能被重写，但可以被重载。</p>
+                        </section>
+
+                        <section>
+                            <h1>4. 初始块</h1>
+                            <p>我们通常使用构造函数或者赋值声明来初始化一个值域。还有第三种机制——初始块，在实例化对象时，初始块中的代码先被执行，然后才会执行构造函数。如果是静态域需要复杂的初始化代码，使用静态初始化块，即在大括号前标记 static（静态初始化块仅在首次加载类时执行一次 ）。例如：</p>
+<code>    class Employee {
+        private static int nextId;
+        . . .
+        // object initialization block
+        static {
+            Random generator = new Random();
+            nextId = generator.nextInt(10000);
+        }
+    }</code>
+                        </section>
+
+                        <section>
+                            <h1>4. 关于 java.lang.Object</h1>
+                            <p><a href="http://docs.oracle.com/javase/8/docs/api/" target="_blank">API: </a>java.lang.Object</p>
+                            <ul>
+                                <li>int hashCode() --- Returns a hash code value for the object.</li>
+                                <li>boolean equals(Object obj) --- Indicates whether some other object is "equal to" this one.</li>
+                                <li>public final Class<?> getClass() --- Returns the runtime class of this Object.</li>
+                                <li>protected void finalize() --- Called by the garbage collector on an object when garbage collection determines that there are no more references to the object.</li>
+                            </ul>
+                            <p>The definitions of equals and hashCode must be compatible: If x.equals(y) is true, then x.hashCode() must be the same value as y.hashCode().
+                            </p>
+                            <p>Java runtime system 通常保持了所有对象的 runtime type identification。这个信息记录了每个对象所属的 class 类型，虚拟机使用这些信息选择正确的方法去执行。该信息就放在 Class 对象里。相应的，Class 类中有 getName 方法。
+                            <p><a href="http://docs.oracle.com/javase/8/docs/api/" target="_blank">API: </a>java.lang.Class</p>
+                            <ul>
+                                <li>String	getName() --- Returns the name of the entity (class, interface, array class, primitive type, or void) represented by this Class object, as a String.</li>
+                                <li>static Class<?>	forName(String className) --- Returns the Class object associated with the class or interface with the given string name.</li>
+                            </ul>
+                            </p>
+                        </section>
+
+                    </div><!--div.a-text -->
+
+
+                </div>
+
+            </article>
+
+            <!-- 显示文章评论 -->
+            <section class="a-comment">
+                <h1 class="comment-title">最新评论.</h1>
+                <p>该文章目前没有任何评论！</p>
+
+                <!-- 实现发表评论界面 -->
+                <form action="ArtReview" method="post" class="comm-form">
+                    <fieldset>
+                        <legend>发表评论</legend>
+                        <input name="action" value="review" type="hidden">
+                        <input name="rootId" value="33" type="hidden">
+                        <label for="revname">Name:</label>
+                        <input id="revname" name="revName" type="text" placeholder="昵称请不要多于10个字">
+                        <textarea name="artRContent" class="artRContent"></textarea>
+                        <input value="发表评论" type="submit" class="comm-submit">
+                    </fieldset>
+                </form>
+            </section>
+        </div><!-- div.list-wrapper -->
+
+
+        <aside>
+            <section>
+                <h1><span>导航</span></h1>
+                <ul>
+                    <li class="cata-single"><a href="../../../">首页</a></li>
+                    <li class="cata-single"><a href="../">文章</a></li>
+                    <li class="cata-single"><a href="../../works/">作品</a></li>
+                    <li class="cata-single"><a href="../../link">链接</a></li>
+                    <li class="cata-single"><a href="../../message">留言</a></li>
+                </ul>
+            </section>
+            <section>
+                <h1><span>分类</span></h1>
+                <ul>
+                    <li class="cata-single"><a href="">前端</a></li>
+                    <li class="cata-single"><a href="">绘画</a></li>
+                    <li class="cata-single"><a href="">数据库</a></li>
+                    <li class="cata-single"><a href="">读书笔记</a></li>
+                </ul>
+            </section>
+        </aside>
+    </div><!-- div.content-wrapper -->
+</div>
+
+
+
+<footer class="bottom-footer">
+    <ul class="line">
+        <li>Copyright &copy; 2012-2015</li>
+        <li><a href="">联系我</a></li>
+    </ul>
+</footer>
+</body>
+</html>

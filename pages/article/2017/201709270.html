@@ -60,18 +60,55 @@
                     <h1 class="a-title">Java Collections</h1>
                     <div class="a-text">
                         <p>Java集合类里面最基本的接口：Collection、Set、List 和 Map。Collection 代表一组对象，每一个对象都是它的子元素；Set 是不包含重复元素的Collection；List 是有顺序的collection，并且可以包含重复元素；Map 是可以把键(key)映射到值(value)的对象，键不能重复。</p>
+
                         <section>
-                            <h1>1. Stack</h1>
+                            <h1>1. Collection and Iterator Interfaces</h1>
+                            <p>Collection 接口有两个基础方法：</p>
+<code>    public interface Collection&lt;E&gt; {
+        boolean add(E element);
+        Iterator&lt;E&gt; iterator();
+        . . .
+    }
+</code>
+                            <p>可以使用返回的 iterator 对象依次访问collection中的元素：</p>
+<code>    Collection&lt;String&gt; c = . . .;
+    Iterator&lt;String&gt; iter = c.iterator();
+    while (iter.hasNext()) {
+        String element = iter.next();
+        do something with element
+    }
+                            </code>
+                            <p>Java SE 5.0 之后可以使用 “for each” 的简洁写法：</p>
+<code>    for (String element : c) {
+        do something with element
+    }
+                            </code>
+                            <p>迭代器可以在迭代的过程中删除底层集合的元素：</p>
+<code>    it.next(); // skip over the first element
+    it.remove(); // now remove it
+</code>
+                        </section>
+
+                        <section>
+                            <h1>2. Collections Framework</h1>
+                            <a href="../../../static/images/article/102320170039120.png" target="_blank"><img src="../../../static/images/article/102320170039120.png" title="点开见大图" /></a>
+                        </section>
+
+                        <section>
+                            <h1>3. HashMap 和 Hashtable</h1>
+                            <p>HashMap 和 Hashtable 都实现了 Map 接口，因此很多特性非常相似。但是，他们有以下不同点： HashMap 允许键和值是 null，而 Hashtable 不允许键或者值是 null。Hashtable 是同步的，而 HashMap 不是，因此， HashMap 更适合于单线程环境，而 Hashtable 适合于多线程环境。HashMap 提供了可供应用迭代的键的集合，因此，HashMap 是快速失败的。另一方面，Hashtable 提供了对键的列举(Enumeration)。一般认为 Hashtable 是一个遗留的类。</p>
+                        </section>
+
+                        <section>
+                            <h1>4. Stack</h1>
                             <p>Stack class extends the Vector class</p>
                         </section>
-                        <section>
-                            <h1></h1>
-                            <p></p>
-                        </section>
+
                     </div><!--div.a-text -->
 
 
                 </div>
+
             </article>
 
             <!-- 显示文章评论 -->

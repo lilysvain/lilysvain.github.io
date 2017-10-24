@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lily's lily - 我的文章</title>
+    <meta name="keywords" content="个人主页,个人网站,前端,设计,电影,生活" />
+    <meta name="description" content="Lily_Vain的个人主页，用于展示、记录、收集学习和生活中的美好的点滴。" />
+    <meta name="author" content="Lily_Vain，狐二十三" />
+    <link rel="Shortcut Icon" href="../../../liv.ico" />
+    <link href="../../../static/style/article.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+<body>
+<footer class="top-fixed">
+    <div class="top-content clearfix">
+        <div class="top-logo">
+            <a href="../../../" class="logo-pic">Lily's Lily</a>
+
+        </div>
+        <nav class="top-links">
+            <ul class="line">
+                <li><a href="../">文章</a></li>
+                <li><a href="../../works/">作品</a></li>
+                <li><a href="../../link">网址收集</a></li>
+                <li><a href="../../message">留言</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
+<div class="main-container">
+    <div class="content-wrapper clearfix">
+        <div class="articles-header">
+            <hgroup>
+                <h1>Lily's Lily</h1>
+                <!-- <h2>——我的文章</h2> -->
+            </hgroup>
+
+        </div>
+
+        <div class="list-wrapper">
+            <article class="a-complete">
+                <time datetime="2017-10-15">
+                    <span class="time-date">12.05</span><br/>
+                    <span>Dec.</span><br/>
+                    <span>2014</span>
+                </time>
+                <div class="a-detail">
+                    <div class="a-label">Tag: &nbsp;<span></span></div>
+                    <h1 class="a-title">字符串和数组</h1>
+                    <div class="a-text">
+                        <section>
+                            <p>这部分内容之前放在文章“Java 数据类型和随机数”里，整理的非常杂乱，现在抽离出来重新开篇新文，并会讲到 char 类型以及他们之间的转换。旧文更改为“Java 基本类型和运算”。</p>
+                        </section>
+
+                        <section>
+                            <h1>1. Object Wrappers and Autoboxing</h1>
+                            <p>可以用于String和int之间的转换，例如：</p>
+<code>    int x = Integer.parseInt(s);
+                            </code>
+                            <p>API: java.lang.Integer</>
+                            <p>Methods:</p>
+                            <ul>
+                                <li>static String toString(int i) --- returns a new String object representing the number i in base 10.</li>
+                                <li>static int parseInt(String s)</li>
+                            </ul>
+                            <p>API: java.lang.Character</>
+                            <p>Methods:</p>
+                            <ul>
+                                <li>static boolean isDigit(char ch) </li>
+                                <li>static boolean isLetter(char ch) </li>
+                                <li>static boolean isLetterOrDigit(char ch)</li>
+                                <li>static char toLowerCase(char ch)</li>
+                                <li>static String toString(char c) --- Returns a String object representing the specified char.</li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h1>2. 字符串 String</h1>
+                            <p>Java 允许使用 “+” 符号来 concatenate 两个字符串。Strings Are Immutable。不要使用 “==” 运算符测试两个字符串是否相等，它只能判断两个字符串是否存在同一个location下。</p>
+                            <p><a href="http://docs.oracle.com/javase/8/docs/api/" target="_blank">API: </a>java.lang.String </p>
+                            <p>String Methods</p>
+                            <ul>
+                                <li>char charAt(int index) --- Returns the code unit at the specified location. You probably don't want to call this method unless you are interested in low-level code units.</li>
+                                <li>boolean equals(Object other) --- Returns true if the string equals other.</li>
+                                <li>boolean equalsIgnoreCase(String other) --- returns true if the string equals other, except for upper/lowercase distinction.</li>
+                                <li>boolean isEmpty() --- Returns true if, and only if, length() is 0.</li>
+                                <li>int indexOf(String str)</li>
+                                <li>int indexOf(String str, int fromIndex) --- Returns the start of the first substring equal to the string str, starting at index 0 or at fromIndex, or –1 if str does not occur in this string.</li>
+                                <li>int length() --- Returns the length of the string.</li>
+                                <li>String[] split(String regex) --- Splits this string around matches of the given regular expression.</li>
+                                <li>String substring(int beginIndex)</li>
+                                <li>String substring(int beginIndex, int endIndex) --- Returns a new string consisting of all code units from beginIndex until the end of the string or until endIndex - 1.</li>
+                                <li>String toLowerCase() --- Returns a new string containing all characters in the original string, with uppercase characters converted to lowercase.</li>
+                                <li>String trim() --- Returns a new string by eliminating all leading and trailing spaces in the original string.</li>
+                                <li>char[] toCharArray() --- Converts this string to a new character array.</li>
+                            </ul>
+                            <p>对于字符串常量，如果内容相同，Java 认为它们代表同一个 String 对象。而用关键字 new 调用构造器，总是会创建一个新的对象，无论内容是否相同。</p>
+
+                            <section>
+                                <h1>2.1 StringBuilder</h1>
+                                <p>Concatenate string 会新建一个 String 对象，消耗时间并且浪费内存，使用 StringBuilder 类可以避免这个问题。</p>
+<code>    StringBuilder builder = new StringBuilder();
+    builder.append(ch); // appends a single character
+    builder.append(str); // appends a string
+    String completedString = builder.toString();
+                                </code>
+                                <p><a href="http://docs.oracle.com/javase/8/docs/api/" target="_blank">API: </a>java.lang.StringBuilder</p>
+                                <ul><li>StringBuilder reverse() --- Causes this character sequence to be replaced by the reverse of the sequence.</li>
+                                </ul>
+                                <p>StringBuilder 是 JDK 1.5 中引入的，和 StringBuffer 的 API是相同的，区别在于它是在单线程环境下使用的，因为它的所有方法都没有被 synchronized 修饰，因此它的效率也比 StringBuffer 略高。</p>
+                                <p>Tips：如果连接后得到的字符串在静态存储区中是早已存在的，那么用 + 做字符串连接是优于 StringBuffer / StringBuilder 的 append 方法的。</p>
+                            </section>
+                        </section>
+
+                        <section>
+                            <h1>3. 数组和 Arrays</h1>
+                            <p>可以使用 Arrays 类中的静态方法来对数组进行复制、填充和排序。例如，将一个数组中的所有值都复制到新数组中，第二个参数为新数组长度。：</p>
+<code>    int[] copiedLuckyNumbers = Arrays.copyOf(luckyNumbers, luckyNumbers.length);</code>
+                            <p><a href="http://docs.oracle.com/javase/8/docs/api/" target="_blank">API: </a>java.util.Arrays</p>
+                            <p>All Methods：</p>
+                            <ul>
+                                <li>static type copyOf(type[] a, int length)</li>
+                                <li>static void sort(type[] a)</li>
+                                <li>static void fill(type[] a, type v) ——sets all elements of the array to v.</li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h1></h1>
+                            <p></p>
+                        </section>
+
+                    </div><!--div.a-text -->
+
+
+                </div>
+            </article>
+
+            <!-- 显示文章评论 -->
+            <section class="a-comment">
+                <h1 class="comment-title">最新评论.</h1>
+                <p>该文章目前没有任何评论！</p>
+
+                <!-- 实现发表评论界面 -->
+                <form action="ArtReview" method="post" class="comm-form">
+                    <fieldset>
+                        <legend>发表评论</legend>
+                        <input name="action" value="review" type="hidden">
+                        <input name="rootId" value="33" type="hidden">
+                        <label for="revname">Name:</label>
+                        <input id="revname" name="revName" type="text" placeholder="昵称请不要多于10个字">
+                        <textarea name="artRContent" class="artRContent"></textarea>
+                        <input value="发表评论" type="submit" class="comm-submit">
+                    </fieldset>
+                </form>
+            </section>
+        </div><!-- div.list-wrapper -->
+
+
+        <aside>
+            <section>
+                <h1><span>导航</span></h1>
+                <ul>
+                    <li class="cata-single"><a href="../../../">首页</a></li>
+                    <li class="cata-single"><a href="../">文章</a></li>
+                    <li class="cata-single"><a href="../../works/">作品</a></li>
+                    <li class="cata-single"><a href="../../link">链接</a></li>
+                    <li class="cata-single"><a href="../../message">留言</a></li>
+                </ul>
+            </section>
+            <section>
+                <h1><span>分类</span></h1>
+                <ul>
+                    <li class="cata-single"><a href="">前端</a></li>
+                    <li class="cata-single"><a href="">绘画</a></li>
+                    <li class="cata-single"><a href="">数据库</a></li>
+                    <li class="cata-single"><a href="">读书笔记</a></li>
+                </ul>
+            </section>
+        </aside>
+    </div><!-- div.content-wrapper -->
+</div>
+
+
+
+<footer class="bottom-footer">
+    <ul class="line">
+        <li>Copyright &copy; 2012-2015</li>
+        <li><a href="">联系我</a></li>
+    </ul>
+</footer>
+</body>
+</html>

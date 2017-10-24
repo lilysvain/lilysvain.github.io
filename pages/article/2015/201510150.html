@@ -86,7 +86,7 @@
 
                         <section>
                             <h1>2. 输入流和输出流的层次结构</h1>
-                            <a href="../../../static/images/article/101820151315090.jpg" target="_blank"><img src="../../../static/images/article/101820151315090.jpg" title="点开见大图" /></a>
+                            <a href="../../../static/images/article/102220172031470.jpg" target="_blank"><img src="../../../static/images/article/102220172031470.jpg" title="点开见大图" /></a>
                             <p><a href="http://docs.oracle.com/javase/8/docs/api/" target="_blank">查看API：</a>java.io.BufferedInputStream</p>
                             <p>BufferedInputStream构造器：</p>
                             <ul>
@@ -97,11 +97,43 @@
                         <section>
                             <h1>3. Reader and Writer</h1>
                             <p>Byte-oriented streams are inconvenient for processing information stored in Unicode (Unicode uses multiple bytes per character). Therefore, a separate hierarchy provides classes for processing Unicode characters that inherit from the abstract Reader and Writer classes. These classes have read and write operations that are based on two-byte Unicode code units.</p>
+                            <a href="../../../static/images/article/101820151315090.jpg" target="_blank"><img src="../../../static/images/article/101820151315090.jpg" title="点开见大图" /></a>
                         </section>
+
+
+                        <section>
+                            <h1>4. Java 序列化</h1>
+                            <p>Java 支持对象序列化机制，可以将一个 object 写入流并且之后读取它。首先，你需要打开一个 ObjectOutputStream 对象：
+                            </p>
+<code>    ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("employee.dat"));
+    Employee harry = new Employee("Harry Hacker", 50000, 1989, 10, 1);
+    Manager boss = new Manager("Carl Cracker", 80000, 1987, 12, 15);
+    out.writeObject(harry);
+    out.writeObject(boss);
+    ObjectInputStream in = new ObjectInputStream(new FileInputStream("employee.dat"));
+    Employee e1 = (Employee) in.readObject();
+    Employee e2 = (Employee) in.readObject();
+                            </code>
+                            <p>你唯一要做的就是为你想实现存储和恢复的类实现 Serializable 接口：</p>
+                            <code>   class Employee implements Serializable { . . . }</code>
+                            <p>Serializable 接口没有方法需要实现的。</p>
+                            <p><a href="http://docs.oracle.com/javase/8/docs/api/" target="_blank">API：</a>java.io.ObjectOutputStream</p>
+                            <ul>
+                                <li>ObjectOutputStream(OutputStream out) --- creates an ObjectOutputStream so that you can write objects to the specified OutputStream .</li>
+                                <li>void writeObject(Object obj) --- writes the specified object to the ObjectOutputStream . This method saves the class of the object, the signature of the class, and the values of any nonstatic, nontransient fields of the class and its superclasses.</li>
+                            </ul>
+                            <p><a href="http://docs.oracle.com/javase/8/docs/api/" target="_blank">API：</a>java.io.ObjectInputStream</p>
+                            <ul>
+                                <li>ObjectInputStream(InputStream in)</li>
+                                <li>Object readObject()</li>
+                            </ul>
+                        </section>
+
                     </div><!--div.a-text -->
 
 
                 </div>
+
             </article>
 
             <!-- 显示文章评论 -->

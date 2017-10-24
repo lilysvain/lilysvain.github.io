@@ -56,8 +56,10 @@
                 </time>
                 <div class="a-detail">
                     <div class="a-label">Tag: &nbsp;<span></span></div>
-                    <h1 class="a-title">Java 数据类型和随机数</h1>
+                    <h1 class="a-title">Java 基本类型和运算</h1>
                     <div class="a-text">
+                        <p>Java 中的基本数据类型有 8 个：byte、short、int、long、float、double、char、boolean；除了基本类型（primitive type）和枚举类型（enumeration type），剩下的都是引用类型（reference type）。
+                        </p>
                         <section>
                             <h1>1. 整数类型</h1>
                             <p>Java 提供四种整数类型：int --- 4 bytes --- –2,147,483,648 to 2,147,483, 647 (just over 2 billion)；short --- 2 bytes --- –32,768 to 32,767；long --- 8 bytes --- –9,223,372,036,854,775,808 to 9,223,372,036,854,775,807；byte --- 1 byte --- –128 to 127。
@@ -67,48 +69,16 @@
                         </section>
 
                         <section>
-                            <h1>2. 字符串 String</h1>
-                            <p>Java 允许使用 “+” 符号来 concatenate 两个字符串。Strings Are Immutable。不要使用 “==” 运算符测试两个字符串是否相等，它只能判断两个字符串是否存在同一个location下。</p>
-                            <p>java.lang.String <a href="http://docs.oracle.com/javase/8/docs/api/" target="_blank">API</a></p>
-                            <p>String Methods</p>
-                            <ul>
-                                <li>char charAt(int index) --- Returns the code unit at the specified location. You probably don't want to call this method unless you are interested in low-level code units.</li>
-                                <li>boolean equals(Object other) --- Returns true if the string equals other.</li>
-                                <li>boolean equalsIgnoreCase(String other) --- returns true if the string equals other, except for upper/lowercase distinction.</li>
-                                <li>int indexOf(String str)</li>
-                                <li>int indexOf(String str, int fromIndex) --- Returns the start of the first substring equal to the string str, starting at index 0 or at fromIndex, or –1 if str does not occur in this string.</li>
-                                <li>int length() --- Returns the length of the string.</li>
-                                <li>String substring(int beginIndex)</li>
-                                <li>String substring(int beginIndex, int endIndex) --- Returns a new string consisting of all code units from beginIndex until the end of the string or until endIndex - 1.</li>
-                                <li>String toLowerCase() --- Returns a new string containing all characters in the original string, with uppercase characters converted to lowercase.</li>
-                                <li>String trim() --- Returns a new string by eliminating all leading and trailing spaces in the original string.</li>
-                                <li>char[] toCharArray() --- Converts this string to a new character array.</li>
+                            <h1>4. 数学函数与常量</h1>
+                            <p><a href="http://docs.oracle.com/javase/8/docs/api/" target="_blank">API：</a>java.lang.Math</p>
+                            <p>Fields: </p>
+                            <ul><li>static double E --- The double value that is closer than any other to e, the base of the natural logarithms.</li>
+                                <li>static double PI --- The double value that is closer than any other to pi, the ratio of the circumference of a circle to its diameter.</li>
                             </ul>
-                        </section>
-
-                        <section>
-                            <h1>3. Object Wrappers and Autoboxing</h1>
-                            <p>可以用于String和int之间的转换，例如：</p>
-                            <code>int x = Integer.parseInt(s);
-                            </code>
-                            <p>API: java.lang.Integer</>
-                            <p>Methods:</p>
+                            <p>Methods: </p>
                             <ul>
-                                <li>static String toString(int i) --- returns a new String object representing the number i in base 10.</li>
-                                <li>static int parseInt(String s)</li>
-                            </ul>
-                        </section>
-
-                        <section>
-                            <h1>4. 数组和 Arrays</h1>
-                            <p>可以使用 Arrays 类中的静态方法来对数组进行复制、填充和排序。例如，将一个数组中的所有值都复制到新数组中，第二个参数为新数组长度。：</p>
-                            <code>int[] copiedLuckyNumbers = Arrays.copyOf(luckyNumbers, luckyNumbers.length);</code>
-                            <p><a href="http://docs.oracle.com/javase/8/docs/api/" target="_blank">API: </a>java.util.Arrays</p>
-                            <p>All Methods：</p>
-                            <ul>
-                                <li>static type copyOf(type[] a, int length)</li>
-                                <li>static void sort(type[] a)</li>
-                                <li>static void fill(type[] a, type v) ——sets all elements of the array to v.</li>
+                                <li>static double pow(double a, double b) --- Returns the value of the first argument raised to the power of the second argument.</li>
+                                <li>static double sqrt(double a) --- Returns the correctly rounded positive square root of a double value.</li>
                             </ul>
                         </section>
 
@@ -124,11 +94,29 @@
                             </ul>
                         </section>
 
+                        <section>
+                            <h1></h1>
+                            <p></p>
+                        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                     </div><!--div.a-text -->
 
 
                 </div>
+
             </article>
 
             <!-- 显示文章评论 -->
